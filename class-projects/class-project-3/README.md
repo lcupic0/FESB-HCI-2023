@@ -1,3 +1,4 @@
-# [Class Project Title]
+# [Deploying Next.js application]
 
-Provide a short description of your results, if applicable.
+Deployed with **Vercel**.
+https://vinario-semestar-project.vercel.app/
