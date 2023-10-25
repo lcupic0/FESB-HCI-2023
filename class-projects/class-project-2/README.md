@@ -53,3 +53,4 @@ We made a set of card topics related to web page for this type of business.
 - Input form for administrator to add new items.
 
 ## 3. Sitemap
+[![](https://raw.githubusercontent.com/lcupic0/FESB-HCI-2023/main/class-projects/class-project-2/addition/sitemap.png)](https://raw.githubusercontent.com/lcupic0/FESB-HCI-2023/main/class-projects/class-project-2/addition/sitemap.png)
