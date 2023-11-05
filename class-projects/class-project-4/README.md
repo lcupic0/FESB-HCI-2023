@@ -1,3 +1,3 @@
-# [Class Project Title]
+# [Class Project 4: Low/High-fidelity prototype]
 
-Provide a short description of your results, if applicable.
+Here is a high-fidelity prototype (.png format) made using Figma.
