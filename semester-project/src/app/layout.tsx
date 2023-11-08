@@ -24,19 +24,19 @@ export default function RootLayout({
               <Link href="/">Početna</Link>
             </li>
             <li>
-              <Link href="/Vina">Vina</Link>
+              <Link href="/vina">Vina</Link>
             </li>
             <li>
-              <Link href="/Gastronomija">Gastronomija</Link>
+              <Link href="/gastronomija">Gastronomija</Link>
             </li>
             <li>
-              <Link href="/Obavijesti">Obavijesti</Link>
+              <Link href="/obavijesti">Obavijesti</Link>
             </li>
             <li>
-              <Link href="/Kontakt">Kontakt</Link>
+              <Link href="/kontakt">Kontakt</Link>
             </li>
             <li>
-              <Link href="/Panel">Admin Panel</Link>
+              <Link href="/panel">Admin Panel</Link>
             </li>
           </ul>
         </nav>  
