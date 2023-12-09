@@ -15,7 +15,7 @@ function Footer() {
           <span className={footer.link}>GASTRONOMIJA</span>
         </div>
         <div className={footer.info}>
-          <span className={footer.potpis}>© 2023. HCI - Luka Čupić</span>
+          <span className={footer.potpis}>&copy; 2023. HCI - Luka Čupić</span>
           <div className={footer["drustvene-mreze"]}>
             <FontAwesomeIcon icon={faInstagram} className={footer.icon}/>
             <FontAwesomeIcon icon={faFacebook} className={footer.icon} />
