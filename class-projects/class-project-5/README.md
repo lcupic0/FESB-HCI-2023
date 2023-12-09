@@ -1,4 +1,5 @@
 # [Full Responsive Page Coding]
 
 Deployed with **Vercel**.
-https://vinario-semestar-project.vercel.app/
+https://vinario-hci-project.vercel.app/
+
