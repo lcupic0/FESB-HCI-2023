@@ -1,0 +1,200 @@
+.background{
+    background-color: var(--clr-background-900);
+    background-image: url("/images/pozadina.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.wrapper{
+    width: 300px;
+    padding: 50px 0px;
+    margin-inline: auto;
+}
+
+.informacije{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.even-columns{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.glavni-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.vino{
+    width: 100%;
+    outline: 2px solid var(--clr-accent-400);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+}
+.vino img{
+    width: 220px;
+    height: auto;
+}
+
+.kategorija{
+    color: var(--clr-accent-400);
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+    position: relative;
+    font-size: 13px;
+}
+
+.ime{
+    font-size: var(--fs-500);
+    color: var(--clr-neutral-100);
+    /* font-family: 'Phudu', cursive; */
+    font-family: 'Metrophobic', sans-serif;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    font-weight: 400;
+}
+
+.berba{
+    font-size: var(--fs-450);
+    color: var(--clr-neutral-100);
+    font-weight: 300;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.glavni-info:nth-child(n+2){
+    line-height: 1px;
+}
+
+.opis{
+    text-align: center;
+    margin: 20px 0px;
+}
+
+.opislarge{
+    display: none;
+    text-align: center; 
+}
+
+.strelica{
+    align-self: center;
+    width: 25px;
+    color: var(--clr-neutral-100);
+    cursor: pointer;
+    margin: 0px
+}
+
+.read-more{
+    display: none;
+    width: 130px;
+    cursor: pointer;
+    border: 0;
+    padding: 10px 16px;
+    background: none;
+    color: var(--font-color-200);
+    border: 2px solid var(--font-color-200);
+    border-radius: 8px;
+    transition: .2s ease-in-out;
+}
+
+.read-more:hover{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border: 2px solid rgb(255, 255, 255);
+    font-weight: var(--fw-bold);
+}
+
+@media (min-width: 480px){
+    .wrapper{
+        width: 400px;
+    }
+
+    .vino img{
+        width: 300px;
+        height: auto;
+    }
+}
+
+@media (min-width: 1024px){
+    .read-more{
+        display: block;
+    }
+    .vino img{
+        width: 250px;
+        height: auto;
+    }
+    .wrapper{
+        width: 1000px;
+        padding: 80px 20px;
+        margin-inline: auto;
+    }
+    .informacije{
+        align-items: flex-start;
+    }
+    .glavni-info{
+        align-items: flex-start;
+    }
+
+    .opis{
+        display: none;
+    }
+    .opislarge{
+        display:block;
+        text-align: unset;
+        margin: 35px 0px;
+    }
+
+    .even-columns{
+        flex-direction: row;
+        gap: 20px;
+    }
+    .ime{
+        font-size: var(--fs-700);
+    }
+    .berba{
+        font-size: var(--fs-450);
+    }
+    .kategorija{
+        font-size: var(--fs-350);
+    }
+}
+
+@media (min-width: 1300px){
+    .wrapper{
+        width: 1200px;
+    }
+    .vino img{
+        width: 300px;
+        height: auto;
+    }
+
+    /* .even-columns{
+        gap: 0px;
+    } */
+}
+
+/* .kategorija:after{
+    content: "";
+    position: absolute;
+    background-color: var(--clr-background-100);
+    height: 1px;
+    width: 100%;
+    bottom: -4px;
+    left: 0;
+} */
+
+/* @media(min-width: 768px){
+    .kategorija:after{
+        width: 100%;
+    }
+} */

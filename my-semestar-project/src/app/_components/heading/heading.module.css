@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=Dancing+Script&family=Fira+Sans:wght@200;300;400;500;700&family=Inter&family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Jost:wght@200;300;400&family=Lora:ital,wght@1,400;1,500;1,600&family=Metrophobic&family=Montserrat:wght@100;300;500&family=News+Cycle&family=Open+Sans&family=Phudu:wght@300&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&family=Varela&family=Varela+Round&display=swap');
+
+.section{
+    background-image: url("/images/prsut-blured.jpg");
+    min-height: calc(100vh - 80px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.content{
+    padding: 80px;
+    background-color: rgba(1, 1, 1, 0.611);
+    color: white;
+    border-radius: 11px;
+    display: grid;
+    justify-items: center;
+    gap: 40px;
+    width: 800px;
+}
+
+.title{
+    font-size: var(--fs-primary-heading);
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+}
+h1.title:after{
+    content: '';
+    width: 100%;
+    height: 1px;
+    display: block;
+    background: var(--clr-accent-400);
+    margin: 10px auto;
+}
+
+.desc{
+    font-size: var(--fs-400);
+}
+
+.button{
+    width: 20%;
+    cursor: pointer;
+    border: 0;
+    padding: 10px 16px;
+    background: none;
+    color: var(--font-color-200);
+    border: 2px solid var(--font-color-200);
+    border-radius: 8px;
+    transition: .2s ease-in-out;
+}
+
+.main-btn:hover{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border: 2px solid rgb(255, 255, 255);
+    font-weight: var(--fw-bold);
+}
+
+.arrow-down{
+    /* font-size: var(--fs-600); */
+    cursor: pointer;
+    transition: .3s ease-in-out;
+    padding-top: 20px;
+    width: 40px;
+}
+
+.arrow-down:hover{
+    color: var(--clr-accent-400);
+}
+
+@media(max-width: 768px){
+    .content{
+        width: calc(100% - 50px);
+        padding: 40px 20px;
+    }
+    .desc{
+        font-size: var(--fs-350);
+    }
+    .arrow-down{
+        /* font-size: var(--fs-500); */
+        width: 30px;
+    }
+}

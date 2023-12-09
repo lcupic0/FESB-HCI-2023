@@ -20,7 +20,7 @@ async function Vina() {
 
     return (
         <div className="vina">
-            <ul className="flex flex-col gap-10">
+            <ul>
                 {wines.map((wine) => (
                     <li key={wine.id}>
                         <Link href={`vina/${wine.id}`}>

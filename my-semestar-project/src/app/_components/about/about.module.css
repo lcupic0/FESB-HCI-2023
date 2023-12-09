@@ -1,0 +1,83 @@
+.wrapper{
+    min-height: 100vh;
+    overflow: hidden;
+    --max-width: 900px;
+    margin-inline: auto;
+    width: min(var(--max-width), 98%);
+    padding: 80px 0px;
+}
+
+.post{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.post > h1{
+    margin: 20px 0px;
+    text-align: center;
+    font-size: var(--fs-550);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: var(--clr-neutral-100);
+}
+
+.post:first-child > h1{
+    margin: 0px 0px 20px 0px;
+}
+
+h1.naslov:after{
+    content: '';
+    width: 100%;
+    height: 1px;
+    display: block;
+    background: var(--clr-accent-400);
+    margin: 10px auto;
+}
+
+.post img{
+    object-fit: cover;
+    width: 100%;
+}
+
+.post p{
+    width: 100%;
+    margin: 20px 0px;
+    font-size: var(--fs-body);
+    text-align: justify;
+}
+
+.quad-images{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 10px;
+    gap: 10px;
+    width: 100%;
+}
+
+.quad-images img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+/* .gastro-gallery{
+    width: 100%;
+}
+
+.gastro-gallery:first-child{
+    border-bottom: 4px solid white;
+}
+
+.gastro-gallery Image{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+} */
+
+.background{
+    background-color: rgb(17, 17, 17);
+}
