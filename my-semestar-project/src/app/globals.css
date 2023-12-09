@@ -1,7 +1,6 @@
 /* Default styles for fresh CSS start */
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=Dancing+Script&family=Fira+Sans:wght@200;300;400;500;700&family=Inter&family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Jost:wght@200;300;400&family=Lora:ital,wght@1,400;1,500;1,600&family=Metrophobic&family=Montserrat:wght@100;300;500&family=News+Cycle&family=Open+Sans&family=Phudu:wght@300&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&family=Varela&family=Varela+Round&display=swap');
 
-
 *,
 *::before,
 *::after{
@@ -66,7 +65,7 @@ html:focus-within {
 
 :root{
   --clr-background-900: #0B0C10;
-  --clr-background-800: #16161f;
+  --clr-background-800: #161616;
   --clr-background-400: #1F2833;
   --clr-background-100: #C5C6C7;  
 

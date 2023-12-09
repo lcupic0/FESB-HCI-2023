@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-around;
     padding: 50px 30px;
-    background-color: rgb(30, 30, 30);
+    background-color: var(--clr-background-800);
 }
 
 .group{
