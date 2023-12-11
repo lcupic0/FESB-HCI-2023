@@ -15,6 +15,10 @@
     box-shadow: inset 0px 0px 15px #ffffff;
 }
 
+.listitem{
+    list-style: none;
+}
+
 .list{
     display: flex;
     gap: 60px;
@@ -41,14 +45,7 @@
     transition: .3s ease;
 }
 
-.active{
-    color: var(--clr-accent-400);
-}
-.list .link.active:after{
-    width: 100%;
-}
-
-.list li:hover{
+.list .link:hover{
     color: var(--clr-accent-400);
 }
 
@@ -56,6 +53,12 @@
     width: 100%;
 }
 
+.list .listitem .link.active{
+    color: var(--clr-accent-400);
+}
+.list .listitem .link.active:after{
+    width: 100%;
+}
 
 .contact-button{
     cursor: pointer;
@@ -80,6 +83,7 @@
     font-family: 'Dancing Script', cursive;
     font-size: 25px;
     transition: .4s ease-in-out;
+    text-decoration: none;
 }
 
 .logo:hover{

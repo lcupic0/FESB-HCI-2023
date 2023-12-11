@@ -1,6 +1,8 @@
 "use client"
 import { useState } from "react";
 import navigation from "./navigation.module.css"
+import Link from "next/link"
+import { usePathname } from "next/navigation";
 
 export type Page = {
     href: string,
@@ -17,15 +19,23 @@ const pages: Page[] = [
 function Navigation() {
 
   const [isNavExpanded, setIsNavExpanded] = useState(false);
+  const pathname = usePathname();
+  console.log(pathname)
 
   return (
     <div className={navigation.wrap}>
       <div className={navigation.wrapper}>
-        <span className={navigation.logo}>Naš kutak</span>
+        <Link href="/" style={{textDecoration: 'none'}}>
+          <span className={navigation.logo}>Naš kutak</span>
+        </Link>
         <nav className={`${navigation["primary"]} ${isNavExpanded ? navigation["data-visible"] : ""}`}>
           <ul className={navigation.list}>
                 {pages.map(({href, title}) => (
-                    <li className={`${navigation.link} ${navigation.activeOVOSTAVITSAMONAJEDNU}`} key={href}>{title}</li>
+                    <li className={`${navigation.listitem}`} key={href}>
+                      <Link href={href} className={`${navigation.link} ${pathname === href ? navigation.active : ''}`}>
+                        {title}
+                      </Link>
+                    </li>
                 ))}
           </ul>
         </nav>
