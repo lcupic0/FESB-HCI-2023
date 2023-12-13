@@ -1,22 +1,16 @@
 "use client"
 import { useState } from "react";
+import React from "react";
 import navigation from "./navigation.module.css"
 import Link from "next/link"
 import { usePathname } from "next/navigation";
+import {Page} from "../../app/layout";
 
-export type Page = {
-    href: string,
-    title: string
+interface navigationProps {
+  pages: Page[];
 }
 
-export const pages: Page[] = [
-    { href: "/", title: "Početna" },
-    { href: "/vina", title: "Vina" },
-    { href: "/gastronomija", title: "Gastronomija" },
-    { href: "/onama", title: "O nama" },
-];
-
-function Navigation() {
+const Navigation: React.FC<navigationProps> = ({ pages }) => {
 
   const [isNavExpanded, setIsNavExpanded] = useState(false);
   const pathname = usePathname();

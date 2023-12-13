@@ -21,9 +21,14 @@
     transition: .3s;
     cursor: pointer;
     color: var(--font-color-300);
+    text-transform: uppercase;
 }
 
 .link:hover{
+    color: var(--clr-accent-400);
+}
+
+.link.active{
     color: var(--clr-accent-400);
 }
 

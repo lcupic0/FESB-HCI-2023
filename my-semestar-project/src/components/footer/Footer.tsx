@@ -1,18 +1,30 @@
+"use client"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faFacebook} from "@fortawesome/free-brands-svg-icons"
 import {faInstagram} from "@fortawesome/free-brands-svg-icons"
 import footer from "./footer.module.css"; 
+import { Page } from "@/app/layout";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
-function Footer() {
+interface footerProps {
+  pages: Page[];
+}
+
+const Footer: React.FC<footerProps> = ({pages}) => {
+
+  const pathName = usePathname();
+
   return (
     <div className={`${footer.wrapper} | bg-color-900`}>
         <h2 className={footer.title}>NAŠ KUTAK</h2>
         <p className={footer.quote}>100% domaći proizvod stvoren na obiteljskom poljoprivrednom gospodarstvu!</p>
         <div className={footer.izbornik}>
-          <span className={footer.link}>POČETAK</span>
-          <span className={footer.link}>VINA</span>
-          <span className={footer.link}>O NAMA</span>
-          <span className={footer.link}>GASTRONOMIJA</span>
+          {pages.map((page) => (
+            <Link href={page.href} style={{textDecoration: 'none'}}>
+              <span className={`${footer.link} ${pathName === page.href ? footer.active : ''}`}>{page.title}</span>
+            </Link>
+          ))}
         </div>
         <div className={footer.info}>
           <span className={footer.potpis}>&copy; 2023. HCI - Luka Čupić</span>
