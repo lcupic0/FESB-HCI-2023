@@ -1,8 +1,8 @@
-import style from "/onama.module.css"
+import style from "./onama.module.css"
 
 export default function Onama() {
     return(
-        <div>
+        <div className={style.onama}>
             Onama Page
         </div>
     )

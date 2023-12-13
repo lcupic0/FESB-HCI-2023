@@ -9,7 +9,7 @@ export type Page = {
     title: string
 }
 
-const pages: Page[] = [
+export const pages: Page[] = [
     { href: "/", title: "Početna" },
     { href: "/vina", title: "Vina" },
     { href: "/gastronomija", title: "Gastronomija" },
@@ -39,7 +39,11 @@ function Navigation() {
                 ))}
           </ul>
         </nav>
-        <button className={navigation["contact-button"]}>Kontakt</button>
+        <Link href="/kontakt">
+          <button className={navigation["contact-button"]}>
+            Kontakt
+          </button>
+        </Link>
         <div className={`${navigation["mobile-toggle"]} ${isNavExpanded ? "change" : ""}`} onClick={() => {setIsNavExpanded(!isNavExpanded);}}>
             <div className={navigation.bar1}></div>
             <div className={navigation.bar2}></div>

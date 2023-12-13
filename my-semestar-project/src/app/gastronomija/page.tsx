@@ -1,8 +1,8 @@
-import style from "/gastronomija.module.css"
+import style from "./gastronomija.module.css"
 
 export default function Gastronomija() {
     return(
-        <div>
+        <div className={style.gastronomija}>
             Gastronomija Page
         </div>
     )

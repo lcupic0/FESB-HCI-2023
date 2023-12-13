@@ -1,8 +1,8 @@
-import style from "/panel.module.css"
+import style from "./panel.module.css"
 
 export default function Panel() {
     return(
-        <div>
+        <div className={style.panel}>
             Panel Page
         </div>
     )
