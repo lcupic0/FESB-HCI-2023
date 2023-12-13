@@ -7,17 +7,7 @@ import {
 import './globals.css'
 import Navigation from '@/components/navigation/Navigation';
 import Footer from '@/components/footer/Footer';
-
-export type Page = {
-  href: string,
-  title: string
-}
-export const pages: Page[] = [
-    { href: "/", title: "Početna" },
-    { href: "/vina", title: "Vina" },
-    { href: "/gastronomija", title: "Gastronomija" },
-    { href: "/onama", title: "O nama" },
-];
+import {Page, pages} from '@/config'
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const montserrat = Montserrat({

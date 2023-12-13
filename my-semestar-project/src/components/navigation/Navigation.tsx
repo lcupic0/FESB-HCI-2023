@@ -4,7 +4,7 @@ import React from "react";
 import navigation from "./navigation.module.css"
 import Link from "next/link"
 import { usePathname } from "next/navigation";
-import {Page} from "../../app/layout";
+import {Page} from "@/config";
 
 interface navigationProps {
   pages: Page[];

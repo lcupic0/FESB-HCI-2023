@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faFacebook} from "@fortawesome/free-brands-svg-icons"
 import {faInstagram} from "@fortawesome/free-brands-svg-icons"
 import footer from "./footer.module.css"; 
-import { Page } from "@/app/layout";
+import { Page } from "@/config";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
