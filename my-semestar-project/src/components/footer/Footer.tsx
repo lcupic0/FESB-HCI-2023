@@ -22,7 +22,7 @@ const Footer: React.FC<footerProps> = ({pages}) => {
         <div className={footer.izbornik}>
           {pages.map((page) => (
             <Link href={page.href} style={{textDecoration: 'none'}} key={page.href}>
-              <span className={`${footer.link} ${pathName === page.href ? footer.active : ''}`}>{page.title}</span>
+              <span className={`${footer.link} ${pathName === page.href ? footer.active : ''}`} key={page.href}>{page.title}</span>
             </Link>
           ))}
         </div>
