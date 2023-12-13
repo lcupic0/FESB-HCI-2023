@@ -62,11 +62,11 @@ h1.title:after{
 }
 
 .arrow-down{
-    /* font-size: var(--fs-600); */
+    font-size: var(--fs-600); 
     cursor: pointer;
     transition: .3s ease-in-out;
     padding-top: 20px;
-    width: 40px;
+    /* width: 40px; */
 }
 
 .arrow-down:hover{
@@ -82,7 +82,7 @@ h1.title:after{
         font-size: var(--fs-350);
     }
     .arrow-down{
-        /* font-size: var(--fs-500); */
-        width: 30px;
+        font-size: var(--fs-500); 
+        /* width: 30px; */
     }
 }
