@@ -8,3 +8,4 @@ https://vinario-hci-project.vercel.app/
 - **Izbornik** - Popraviti veličine slika i njihovog okvira.
 - Refaktorizacija koda i CSS-a, popraviti boje i varijable. Pokušati implementirati bolji način za Google Fonts.
 - Promjeniti trenutni logo s logo ikonicom u Navigation Bar-u.
+- Odlaskom na "/kontakt" naznačiti button slično kao i ostale rute u navigaciji.
