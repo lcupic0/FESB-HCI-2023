@@ -1,5 +1,10 @@
-import about from "./about.module.css"
+import about from './about.module.css'
 import Image from 'next/image'
+import vinograd from '../../../../public/images/vinograd.jpg'
+import crnoGrozde from '../../../../public/images/crnogrozde.jpg'
+import drnis5 from '../../../../public/images/drnis5.jpg'
+import bijeloGrozde from '../../../../public/images/bilogrozde.jpg'
+// Ovaj način importa slika se naziva Local Images. Next.js will automatically determine the width and height of your image based on the imported file.
 
 export default function About() {
   return (
@@ -13,22 +18,22 @@ export default function About() {
           <p>
             Naša je kušaonica smještena u malom mjestu Jadrtovcu, među brežuljcima s kojih se pruža pogled na Jadransko more i šibenski arhipelag, i rado primamo posjete – pozvani ste! Naš je stručni enolog, autoritet za dalmatinska vina, uz pomoć inovativne tehnologije, stvorio bogata i kompleksna vina koja vas svojim opojnim okusom približavaju prirodi
           </p>
-          <img src="/images/vinograd.jpg" alt="Vinograd"/>
+          <Image src={vinograd} className={about.slika} alt="Vinograd" />
           <div className={about["quad-images"]}>
-            <img src="/images/crnogrozde.jpg" alt=""/>
-            <img src="/images/vinograd.jpg" alt="" />
-            <img src="/images/drnis5.jpg" alt="" />
-            <img src="/images/bilogrozde.jpg" alt="" />
+            <Image src={crnoGrozde} className={about.slika} alt="Crno Grozde" />
+            <Image src={vinograd} className={about.slika} alt="Vinograd" />
+            <Image src={drnis5} className={about.slika} alt="Grad Drnis" />
+            <Image src={bijeloGrozde} className={about.slika} alt="Bijelo Grozde" />
           </div>
         </div>
         <div className={about.post}>
           <h1 className={about.naslov}>GASTRONOMIJA</h1>
           <p>Dalmacija i Šibenik s okolicom puni su prirodnih ljepota koje oduzimaju dah, poput brojnih i slikovitih vinograda koji krase osunčane obronke. Vino se ovdje radi već dvije tisuće godina, o čemu svjedoče testamenti iz davnih vremena, neki čak i iz doba starog Rima. Tri su takva testamenta. Prvi je hipokaust iz 2. stoljeća, grijana prostorija koju su stari Rimljani često koristili za dozrijevanje obranog grožđa. Drugi su 102 antičke amfore korištene za prijevoz vina i maslinovog ulja, pronađene na dnu Jadranskog mora kraj Šibenika. A treći je Machina Nova, preša za grožđe koju je u 16. stoljeću izumio poznati izumitelj Faust Vrančić, rodom iz okolice Šibenika.</p>
           <div className={about["quad-images"]}>
-            <img src="/images/crnogrozde.jpg" alt=""/>
-            <img src="/images/vinograd.jpg" alt="" />
-            <img src="/images/drnis5.jpg" alt="" />
-            <img src="/images/bilogrozde.jpg" alt="" />
+            <Image src={crnoGrozde} className={about.slika} alt="Crno Grozde"/>
+            <Image src={vinograd} className={about.slika} alt="Vinograd" />
+            <Image src={drnis5} className={about.slika} alt="Grad Drnis" />
+            <Image src={bijeloGrozde} className={about.slika} alt="Bijelo Grozde" />
           </div>
         </div>
     </div>

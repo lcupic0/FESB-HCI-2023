@@ -42,9 +42,10 @@ h1.naslov:after{
     margin: 10px auto;
 }
 
-.post img{
+.post .slika{
     object-fit: cover;
     width: 100%;
+    height: auto;
 }
 
 .post p{
@@ -62,7 +63,7 @@ h1.naslov:after{
     width: 100%;
 }
 
-.quad-images img{
+.quad-images .slika{
     object-fit: cover;
     height: 100%;
     width: 100%;
