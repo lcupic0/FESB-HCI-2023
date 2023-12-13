@@ -21,7 +21,7 @@ const Footer: React.FC<footerProps> = ({pages}) => {
         <p className={footer.quote}>100% domaći proizvod stvoren na obiteljskom poljoprivrednom gospodarstvu!</p>
         <div className={footer.izbornik}>
           {pages.map((page) => (
-            <Link href={page.href} style={{textDecoration: 'none'}}>
+            <Link href={page.href} style={{textDecoration: 'none'}} key={page.href}>
               <span className={`${footer.link} ${pathName === page.href ? footer.active : ''}`}>{page.title}</span>
             </Link>
           ))}
