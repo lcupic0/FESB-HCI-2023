@@ -1,3 +1,113 @@
 .vina{
-    min-height: 100vh;
+    display: flex;
+    justify-content: space-evenly; /* Mozda naci drugi nacin za centrirati livu i desnu stranu jer glupo je da se zbijaji prema livoj strani, a ako koristim width: 80vw onda je prevelik razmak između "cardova" */
+    padding: 70px;
+    color: var(--clr-neutral-100);
+    overflow: hidden;
+}
+
+.leftcol{
+    /* background-color: rgb(48, 43, 43); */
+    width: 20vw;
+}
+
+.odabir:first-child{
+    margin-bottom: 60px;
+}
+
+.odabir > p{
+    margin-bottom: 7px;
+    font-size: var(--fs-450);
+}
+
+.forma{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input{
+    margin-right: 5px;
+    border: none;
+}
+
+.label{
+    cursor: pointer;
+}
+
+/* Desna strana */
+.rightcol{
+    /* background-color: rgb(53, 53, 53); */
+    /* width: 80vw; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    gap: 70px;
+}
+
+.card{
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    background-image: url("/images/vino4.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+    outline: 2px solid var(--clr-accent-400)
+}
+
+.card:hover{
+    outline: 2px solid var(--clr-neutral-100)
+}
+
+@media (max-width: 1100px){
+    .vina{
+        flex-direction: column;
+    }
+
+    .leftcol{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .rightcol{
+        width: 100%;
+        gap: 50px;
+        align-self: center;
+    }
+
+    .card{
+        width: 150px;
+        height: 150px;
+    }
+
+    .forma{
+        flex-direction: row;
+        gap: 20px
+    }
+}
+
+@media(max-width: 768px){
+    .vina{
+        padding: 15px;
+    }
+    .leftcol{
+        justify-content: center;
+        gap: 100px
+    }
+    .rightcol{
+       grid-template-columns: 1fr 1fr;
+       gap: 50px;
+    }
+    .forma{
+        flex-direction: column;
+    }
+    .label{
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.700);
+        border-radius: 5px;
+    }
 }
