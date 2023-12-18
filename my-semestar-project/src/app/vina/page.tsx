@@ -24,14 +24,14 @@ export interface Vino {
     image: string;
 }
 
-const getWines = async (): Promise<Vino[]> => {
-    const data = await fetch(`http://localhost:5001/vina`);
-    return data.json();
-}
+// const getWines = async (): Promise<Vino[]> => {
+//     const data = await fetch(`http://localhost:5001/vina`);
+//     return data.json();
+// }
 
 export default async function Vina() {
-    const vina = await getWines();
-    console.log(vina);
+    // const vina = await getWines();
+    // console.log(vina);
 
     return(
         <div className={style.vina}>
