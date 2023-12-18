@@ -7,7 +7,7 @@ import {
 import './globals.css'
 import Navigation from '@/components/navigation/Navigation';
 import Footer from '@/components/footer/Footer';
-import {Page, pages} from '@/config'
+import {pages} from '@/config'
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const montserrat = Montserrat({

@@ -49,6 +49,7 @@
     width: 200px;
     height: 200px;
     padding: 10px;
+    border-radius: 6px;
     background-image: url("/images/vino4.jpg");
     background-size: cover;
     background-position: center;

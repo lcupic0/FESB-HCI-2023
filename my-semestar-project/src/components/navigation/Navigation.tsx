@@ -15,6 +15,7 @@ const Navigation: React.FC<navigationProps> = ({ pages }) => {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
   const pathname = usePathname();
   console.log(pathname)
+  console.log(isNavExpanded);
 
   return (
     <div className={navigation.wrap}>
@@ -26,7 +27,7 @@ const Navigation: React.FC<navigationProps> = ({ pages }) => {
           <ul className={navigation.list}>
                 {pages.map(({href, title}) => (
                     <li className={`${navigation.listitem}`} key={href}>
-                      <Link href={href} className={`${navigation.link} ${pathname === href ? navigation.active : ''}`}>
+                      <Link href={href} className={`${navigation.link} ${pathname === href ? navigation.active : ''}`} onClick={() => setIsNavExpanded(!isNavExpanded)}>
                         {title}
                       </Link>
                     </li>
@@ -38,10 +39,10 @@ const Navigation: React.FC<navigationProps> = ({ pages }) => {
             Kontakt
           </button>
         </Link>
-        <div className={`${navigation["mobile-toggle"]} ${isNavExpanded ? "change" : ""}`} onClick={() => {setIsNavExpanded(!isNavExpanded);}}>
-            <div className={navigation.bar1}></div>
-            <div className={navigation.bar2}></div>
-            <div className={navigation.bar3}></div>
+        <div className={`${navigation["mobile-toggle"]} ${isNavExpanded ? `${navigation.change}` : ""}`} onClick={() => {setIsNavExpanded(!isNavExpanded);}}>
+          <div className={navigation.bar1}></div>
+          <div className={navigation.bar2}></div>
+          <div className={navigation.bar3}></div>
         </div>
       </div>
     </div>

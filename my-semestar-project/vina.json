@@ -1,0 +1,74 @@
+{
+    "vina": [
+        {
+            "id": 1,
+            "naziv": "Pošip",
+            "vrsta": "Bijelo",
+            "kvaliteta": "Kvalitetno",
+            "berba": 2015,
+            "alkohol": "13.5%",
+            "stanje": "true",
+            "image": "vino1.jpg"
+        },
+        {
+            "id": 2,
+            "naziv": "Maraština",
+            "vrsta": "Bijelo",
+            "kvaliteta": "Kvalitetno",
+            "berba": 2015,
+            "alkohol": "13.5%",
+            "stanje": "true",
+            "image": "vino2.jpg"
+        },
+        {
+            "id": 3,
+            "naziv": "Debit",
+            "vrsta": "Bijelo",
+            "kvaliteta": "Kvalitetno",
+            "berba": 2015,
+            "alkohol": "13.5%",
+            "stanje": "true",
+            "image": "vino3.jpg"
+        },
+        {
+            "id": 4,
+            "naziv": "Pošip",
+            "vrsta": "Bijelo",
+            "kvaliteta": "Kvalitetno",
+            "berba": 2015,
+            "alkohol": "13.5%",
+            "stanje": "true",
+            "image": "vino4.jpg"
+        },
+        {
+            "id": 5,
+            "naziv": "Plavac",
+            "vrsta": "Bijelo",
+            "kvaliteta": "Kvalitetno",
+            "berba": 2015,
+            "alkohol": "13.5%",
+            "stanje": "true",
+            "image": "vino5.jpg"
+        },
+        {
+            "id": 6,
+            "naziv": "Plavina",
+            "vrsta": "Bijelo",
+            "kvaliteta": "Kvalitetno",
+            "berba": 2015,
+            "alkohol": "13.5%",
+            "stanje": "true",
+            "image": "vino6.jpg"
+        },
+        {
+            "id": 7,
+            "naziv": "Debitos",
+            "vrsta": "Bijelo",
+            "kvaliteta": "Kvalitetno",
+            "berba": 2015,
+            "alkohol": "13.5%",
+            "stanje": "true",
+            "image": "vino7.jpg"
+        }
+    ]
+}
