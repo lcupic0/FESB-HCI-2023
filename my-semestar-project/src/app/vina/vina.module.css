@@ -56,11 +56,11 @@
     background-repeat: no-repeat;
     cursor: pointer;
     transition: .3s ease-in-out;
-    outline: 2px solid var(--clr-accent-400)
+    outline: 2px solid var(--clr-accent-400);
 }
 
 .card:hover{
-    outline: 2px solid var(--clr-neutral-100)
+    outline: 2px solid var(--clr-neutral-100)!important;
 }
 
 @media (max-width: 1100px){

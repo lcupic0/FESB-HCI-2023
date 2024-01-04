@@ -1,17 +1,6 @@
+"use client"
+import { useEffect, useState } from "react";
 import style from "./vina.module.css"
-
-/*
-{
-    "id": 1,
-    "naziv": "Pošip",
-    "vrsta": "Bijelo",
-    "kvaliteta": "Kvalitetno",
-    "berba": 2015,
-    "alkohol": "13.5%",
-    "stanje": "true",
-    "image": "vino1.jpg"
-}
-*/
 
 export interface Vino {
     id: number;
@@ -24,14 +13,38 @@ export interface Vino {
     image: string;
 }
 
-// const getWines = async (): Promise<Vino[]> => {
-//     const data = await fetch(`http://localhost:5001/vina`);
-//     return data.json();
-// }
+export default function Vina() {
+    const [vines, setVines] = useState<Vino[]>([]);
+    const [filters, setFilters] = useState({
+        kvaliteta: "",
+        vrsta: ""
+    });
 
-export default async function Vina() {
-    // const vina = await getWines();
-    // console.log(vina);
+    useEffect(() => {
+        const fetchData = () => {
+            fetch("http://localhost:5001/vina")
+            .then((res) => res.json())
+            .then((data) => setVines(data))
+            .catch((error) => console.log(error));
+        }    
+        fetchData();
+
+        
+    }, []);
+
+    const handleFilterChange = (event: any) => {
+        const {name, value} = event.target;
+
+        setFilters(prevFilters => ({...filters, [name]: value}))
+        // console.log(filters) --> Ovo mi ne ispise nove filtere a ne razumim iz koje razloga. Cak i kad setTimeout stavim ne ispise ga odma.
+    }
+
+    const filteredData = vines.filter(vino => {
+        const testKvaliteta = filters.kvaliteta === "" || filters.kvaliteta === vino.kvaliteta;
+        const testVrsta = filters.vrsta === "" || filters.vrsta === vino.vrsta;
+
+        return testKvaliteta && testVrsta;
+    });
 
     return(
         <div className={style.vina}>
@@ -40,15 +53,15 @@ export default async function Vina() {
                     <p>Kvaliteta:</p>
                     <form className={style.forma}>
                         <label className={style.label}>
-                            <input type="radio" className={style.input}/>
+                            <input type="radio" name="kvaliteta" value="" checked={filters.kvaliteta === ""} onChange={handleFilterChange} className={style.input}/>
                             Sve
                         </label>
                         <label className={style.label}>
-                            <input type="radio" className={style.input}/>
+                            <input type="radio" name="kvaliteta" value="Kvalitetno" checked={filters.kvaliteta === "Kvalitetno"} onChange={handleFilterChange} className={style.input}/>
                             Kvalitetno
                         </label>
                         <label className={style.label}>
-                            <input type="radio" className={style.input}/>
+                            <input type="radio" name="kvaliteta" value="Vrhunsko" checked={filters.kvaliteta === "Vrhunsko"} onChange={handleFilterChange} className={style.input}/>
                             Vrhunsko
                         </label>
                     </form>
@@ -57,52 +70,31 @@ export default async function Vina() {
                     <p>Vrsta:</p>
                     <form className={style.forma}>
                         <label className={style.label}>
-                            <input type="radio" className={style.input}/>
-                            Crno
+                            <input type="radio" name="vrsta" value="" checked={filters.vrsta === ""} onChange={handleFilterChange} className={style.input}/>
+                            Sve
                         </label>
                         <label className={style.label}>
-                            <input type="radio" className={style.input}/>
+                            <input type="radio" name="vrsta" value="Bijelo" checked={filters.vrsta === "Bijelo"} onChange={handleFilterChange} className={style.input}/>
                             Bijelo
                         </label>
                         <label className={style.label}>
-                            <input type="radio" className={style.input}/>
-                            Rose
+                            <input type="radio" name="vrsta" value="Crno" checked={filters.vrsta === "Crno"} onChange={handleFilterChange} className={style.input}/>
+                            Crno
                         </label>
                     </form>
                 </div>
             </div>
             <div className={style.rightcol}>
-                
-                <div className={style.card}>
-                    Pošip
-                </div>
-                <div className={style.card}>
-                    Maraština
-                </div>
-                <div className={style.card}>
-                    Debit
-                </div>
-                <div className={style.card}>
-                    Merlot
-                </div>
-                <div className={style.card}>
-                    Plavina
-                </div>
-                <div className={style.card}>
-                    Plavac
-                </div>
-                
+                {vines ? (
+                    filteredData.map((vino) => (
+                        <div className={style.card} key={vino.id} style={{backgroundImage: `url("/images/${vino.image}")`}}>
+                            {vino.naziv}
+                        </div>
+                    ))
+                ) : (
+                    <div>Loading...</div>
+                )}               
             </div>
         </div>
     )
 }
-
-/*
-<div className={style.rightcol}>
-    {vina.map((vino) => (
-        <div className={style.card} key={vino.id}>
-            {vino.naziv}
-        </div>
-    ))}
-</div>
-*/

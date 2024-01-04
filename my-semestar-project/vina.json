@@ -8,17 +8,19 @@
             "berba": 2015,
             "alkohol": "13.5%",
             "stanje": "true",
-            "image": "vino1.jpg"
+            "opis": "O podrijetlu ove sorte dugo je postojalo više hipoteza. Najčešće se tvrdilo da su ga davno, za potrebe „prve“ obnove vinograda korčulanski pomorci s Istoka donijeli na svoj otok. Ovu hipotezu su potvrđivala i ispitivanja koja su pokazala da Pošip po svojim morfološkim karakteristikama pripada ekološko-geografskoj skupini Conv. Occidentalis. No tek su najnovija DNK ispitivanja otkrila da je ta „orijentalna“ morfološka svojstva Pošip samo naslijedio, a da je on uistinu pravi i autohtoni Korčulanin.",
+            "image": "vino4.jpg"
         },
         {
             "id": 2,
             "naziv": "Maraština",
             "vrsta": "Bijelo",
-            "kvaliteta": "Kvalitetno",
+            "kvaliteta": "Vrhunsko",
             "berba": 2015,
             "alkohol": "13.5%",
             "stanje": "true",
-            "image": "vino2.jpg"
+            "opis": "O podrijetlu ove sorte dugo je postojalo više hipoteza. Najčešće se tvrdilo da su ga davno, za potrebe „prve“ obnove vinograda korčulanski pomorci s Istoka donijeli na svoj otok. Ovu hipotezu su potvrđivala i ispitivanja koja su pokazala da Pošip po svojim morfološkim karakteristikama pripada ekološko-geografskoj skupini Conv. Occidentalis. No tek su najnovija DNK ispitivanja otkrila da je ta „orijentalna“ morfološka svojstva Pošip samo naslijedio, a da je on uistinu pravi i autohtoni Korčulanin.",
+            "image": "vino4.jpg"
         },
         {
             "id": 3,
@@ -27,38 +29,42 @@
             "kvaliteta": "Kvalitetno",
             "berba": 2015,
             "alkohol": "13.5%",
-            "stanje": "true",
-            "image": "vino3.jpg"
+            "stanje": "false",
+            "opis": "O podrijetlu ove sorte dugo je postojalo više hipoteza. Najčešće se tvrdilo da su ga davno, za potrebe „prve“ obnove vinograda korčulanski pomorci s Istoka donijeli na svoj otok. Ovu hipotezu su potvrđivala i ispitivanja koja su pokazala da Pošip po svojim morfološkim karakteristikama pripada ekološko-geografskoj skupini Conv. Occidentalis. No tek su najnovija DNK ispitivanja otkrila da je ta „orijentalna“ morfološka svojstva Pošip samo naslijedio, a da je on uistinu pravi i autohtoni Korčulanin.",
+            "image": "vino4.jpg"
         },
         {
             "id": 4,
             "naziv": "Pošip",
             "vrsta": "Bijelo",
-            "kvaliteta": "Kvalitetno",
+            "kvaliteta": "Vrhunsko",
             "berba": 2015,
             "alkohol": "13.5%",
             "stanje": "true",
+            "opis": "O podrijetlu ove sorte dugo je postojalo više hipoteza. Najčešće se tvrdilo da su ga davno, za potrebe „prve“ obnove vinograda korčulanski pomorci s Istoka donijeli na svoj otok. Ovu hipotezu su potvrđivala i ispitivanja koja su pokazala da Pošip po svojim morfološkim karakteristikama pripada ekološko-geografskoj skupini Conv. Occidentalis. No tek su najnovija DNK ispitivanja otkrila da je ta „orijentalna“ morfološka svojstva Pošip samo naslijedio, a da je on uistinu pravi i autohtoni Korčulanin.",
             "image": "vino4.jpg"
         },
         {
             "id": 5,
             "naziv": "Plavac",
-            "vrsta": "Bijelo",
-            "kvaliteta": "Kvalitetno",
+            "vrsta": "Crno",
+            "kvaliteta": "Vrhunsko",
             "berba": 2015,
             "alkohol": "13.5%",
-            "stanje": "true",
-            "image": "vino5.jpg"
+            "stanje": "false",
+            "opis": "O podrijetlu ove sorte dugo je postojalo više hipoteza. Najčešće se tvrdilo da su ga davno, za potrebe „prve“ obnove vinograda korčulanski pomorci s Istoka donijeli na svoj otok. Ovu hipotezu su potvrđivala i ispitivanja koja su pokazala da Pošip po svojim morfološkim karakteristikama pripada ekološko-geografskoj skupini Conv. Occidentalis. No tek su najnovija DNK ispitivanja otkrila da je ta „orijentalna“ morfološka svojstva Pošip samo naslijedio, a da je on uistinu pravi i autohtoni Korčulanin.",
+            "image": "vino4.jpg"
         },
         {
             "id": 6,
             "naziv": "Plavina",
-            "vrsta": "Bijelo",
+            "vrsta": "Crno",
             "kvaliteta": "Kvalitetno",
             "berba": 2015,
             "alkohol": "13.5%",
             "stanje": "true",
-            "image": "vino6.jpg"
+            "opis": "O podrijetlu ove sorte dugo je postojalo više hipoteza. Najčešće se tvrdilo da su ga davno, za potrebe „prve“ obnove vinograda korčulanski pomorci s Istoka donijeli na svoj otok. Ovu hipotezu su potvrđivala i ispitivanja koja su pokazala da Pošip po svojim morfološkim karakteristikama pripada ekološko-geografskoj skupini Conv. Occidentalis. No tek su najnovija DNK ispitivanja otkrila da je ta „orijentalna“ morfološka svojstva Pošip samo naslijedio, a da je on uistinu pravi i autohtoni Korčulanin.",
+            "image": "vino4.jpg"
         },
         {
             "id": 7,
@@ -68,7 +74,8 @@
             "berba": 2015,
             "alkohol": "13.5%",
             "stanje": "true",
-            "image": "vino7.jpg"
+            "opis": "O podrijetlu ove sorte dugo je postojalo više hipoteza. Najčešće se tvrdilo da su ga davno, za potrebe „prve“ obnove vinograda korčulanski pomorci s Istoka donijeli na svoj otok. Ovu hipotezu su potvrđivala i ispitivanja koja su pokazala da Pošip po svojim morfološkim karakteristikama pripada ekološko-geografskoj skupini Conv. Occidentalis. No tek su najnovija DNK ispitivanja otkrila da je ta „orijentalna“ morfološka svojstva Pošip samo naslijedio, a da je on uistinu pravi i autohtoni Korčulanin.",
+            "image": "vino4.jpg"
         }
     ]
 }
