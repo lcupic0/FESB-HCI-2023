@@ -4,7 +4,7 @@ Deployed with **Vercel**.
 https://vinario-hci-project.vercel.app/
 
 ## Tasks
-1. Designing "Vina" pages that shows list of all wine items in Figma
+1. Design and code "Vina" pages that shows list of all wine items.
 2. Use "json-server" for database impersonation and fetch list of wine and display them on page.
 3. Fix navigation bar on mobile screens (Replace 3 bars with X when clicked)
 
