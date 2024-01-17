@@ -1,0 +1,16 @@
+.vino{
+    padding: 40px;
+}
+
+.data{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.slika{
+    width: auto;
+    height: 300px;
+    object-fit: scale-down;
+    border-radius: 30px;
+}
