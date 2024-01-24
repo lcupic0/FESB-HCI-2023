@@ -1,6 +1,8 @@
 "use client"
+import style from "./vina.module.css"
 import { useEffect, useState } from "react";
-import style from "./cmsstyle.module.css"
+import { createClient } from "contentful";
+import Link from "next/link";
 
 export interface Vino {
     id: number;
@@ -13,7 +15,7 @@ export interface Vino {
     image: string;
 }
 
-export default function CmsPage() {
+export default function Vina() {
     const [vines, setVines] = useState<Vino[]>([]);
     const [filters, setFilters] = useState({
         kvaliteta: "",
@@ -87,9 +89,11 @@ export default function CmsPage() {
             <div className={style.rightcol}>
                 {vines ? (
                     filteredData.map((vino) => (
-                        <div className={style.card} key={vino.id} style={{backgroundImage: `url("/images/${vino.image}")`}}>
-                            {vino.naziv}
-                        </div>
+                        <Link href={`vina/${vino.id}`} style={{textDecoration: 'none', color: 'unset'}} key={vino.id} >
+                            <div className={style.card} key={vino.id} style={{backgroundImage: `url("/images/${vino.image}")`}}>
+                                {vino.naziv}
+                            </div>
+                        </Link>
                     ))
                 ) : (
                     <div>Loading...</div>

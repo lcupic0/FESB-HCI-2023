@@ -14,8 +14,8 @@ const Navigation: React.FC<navigationProps> = ({ pages }) => {
 
   const [isNavExpanded, setIsNavExpanded] = useState(false);
   const pathname = usePathname();
-  console.log(pathname)
-  console.log(isNavExpanded);
+  // console.log(pathname)
+  // console.log(isNavExpanded);
 
   return (
     <div className={navigation.wrap}>

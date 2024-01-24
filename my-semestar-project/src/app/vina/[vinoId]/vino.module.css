@@ -1,16 +1,156 @@
 .vino{
-    padding: 40px;
+  font-weight: 300;
+}
+
+.wrapper{
+  /* background-color: rgb(60, 60, 60); */
+  --max-width: 750px;
+  --padding: 30px;
+  margin-inline: auto; /* da postavi left and right -> Logical Property */
+  width: min(var(--max-width), 100% - (2*var(--padding)));
+  padding: 80px 0px;
 }
 
 .data{
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Alternativa za postavljanje da slika bude iste visine kao i desni opis ili obrnuto. */
+  width: 100%;
+  margin-bottom: 80px;
 }
 
 .slika{
-    width: auto;
+  width: 300px;
+  height: 400px;
+  /* object-fit: scale-down; */
+  border-radius: 30px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.rightcol{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.rightcol > h1{
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--clr-neutral-100);
+}
+
+.rightcol > h1:after{
+  content: '';
+  width: 100%;
+  height: 1px;
+  display: block;
+  background: var(--clr-accent-400);
+  margin: 5px auto;
+}
+
+.facts{
+  color: var(--clr-neutral-100);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.fact{
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
+  padding-bottom: 8px;
+}
+
+.fact>span:first-child{
+  font-weight: 500;
+}
+
+.dostupnost{
+  color: var(--clr-neutral-100);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+}
+.dostupnost .cijena{
+  font-size: 22px;
+  font-weight: 400;
+  color: #B78D10;
+}
+.dostupnost .ikona{
+  color: var(--clr-accent-400);
+  font-size: 15px;
+  margin-right: 4px;
+}
+
+.opis{
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 30px 0px;
+}
+.opis > h1{
+  color: var(--clr-neutral-100);
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.opis > p{
+  text-align: justify;
+  margin: 30px 0px;
+}
+
+.botun{
+  cursor: pointer;
+  border: 0;
+  padding: 10px 16px;
+  background: #393939;
+  color: var(--clr-neutral-100);
+  font-weight: 300;
+  border-radius: 8px;
+  transition: .2s ease-in-out;
+}
+
+.botun:hover{
+  background-color: #6E6E6E;
+  color: black;
+  /* border: 2px solid rgb(255, 255, 255); */
+}
+
+@media(max-width: 768px){
+  .slika{
+    width: 240px;
+    height: 400px;
+  }
+}
+
+@media(max-width: 600px){
+  .slika{
+    width: 200px;
     height: 300px;
-    object-fit: scale-down;
-    border-radius: 30px;
+  }
+}
+
+@media(max-width: 480px){
+  .data{
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+  .wrapper{
+    padding: 50px 0px;
+  }
+
+  .slika{
+    width: 100%;
+    height: 350px;
+    margin-bottom: 50px;
+  }
+
+  .botun{
+    width: 100%;
+  }
 }

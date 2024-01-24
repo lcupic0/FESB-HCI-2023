@@ -1,67 +1,24 @@
 "use client"
-import { useEffect, useState } from "react";
 import style from "./vina.module.css"
-import { createClient } from "contentful";
+import { useEffect, useState } from "react";
+import { FC } from "react";
 import Link from "next/link";
 
-export interface Vino {
-    id: number;
-    naziv: string;
-    vrsta: string;
-    kvaliteta: string;
-    berba: number;
-    alkohol: string;
-    stanje: string;
-    image: string;
-}
+import contentfulService from "@/lib/contentfulClient";
+import { TypeVineListItem } from "@/lib/contentfulClient";
 
-// export async function getStaticProps() {
-//     const client = createClient({
-//         space: `${process.env.CONTENTFUL_SPACE_ID}`,
-//         accessToken: `${process.env.CONTENTFUL_ACCESS_KEY}`
-//     });
-
-//     const res = await client.getEntries({content_type: 'vina'})
-
-//     return {
-//         props: {
-//             vina: res.items
-//         }
-//     }
-// }
-
-export default function Vina() {
-    const [vines, setVines] = useState<Vino[]>([]);
-    const [filters, setFilters] = useState({
-        kvaliteta: "",
-        vrsta: ""
-    });
-
+const Vina: FC<any> = () => {
+    const [vines, setVines] = useState<TypeVineListItem[]>([]);
+    
     useEffect(() => {
-        const fetchData = () => {
-            fetch("http://localhost:5001/vina")
-            .then((res) => res.json())
-            .then((data) => setVines(data))
-            .catch((error) => console.log(error));
-        }    
-        fetchData();
-
+        const fetchData = async () => {
+            const fetchedVines = await contentfulService.getAllVines();
+            setVines(fetchedVines);
+        };
         
+        fetchData();
+        console.log(vines);
     }, []);
-
-    const handleFilterChange = (event: any) => {
-        const {name, value} = event.target;
-
-        setFilters(prevFilters => ({...filters, [name]: value}))
-        // console.log(filters) --> Ovo mi ne ispise nove filtere a ne razumim iz koje razloga. Cak i kad setTimeout stavim ne ispise ga odma.
-    }
-
-    const filteredData = vines.filter(vino => {
-        const testKvaliteta = filters.kvaliteta === "" || filters.kvaliteta === vino.kvaliteta;
-        const testVrsta = filters.vrsta === "" || filters.vrsta === vino.vrsta;
-
-        return testKvaliteta && testVrsta;
-    });
 
     return(
         <div className={style.vina}>
@@ -70,15 +27,15 @@ export default function Vina() {
                     <p>Kvaliteta:</p>
                     <form className={style.forma}>
                         <label className={style.label}>
-                            <input type="radio" name="kvaliteta" value="" checked={filters.kvaliteta === ""} onChange={handleFilterChange} className={style.input}/>
+                            <input type="radio" name="kvaliteta" value="" className={style.input}/>
                             Sve
                         </label>
                         <label className={style.label}>
-                            <input type="radio" name="kvaliteta" value="Kvalitetno" checked={filters.kvaliteta === "Kvalitetno"} onChange={handleFilterChange} className={style.input}/>
+                            <input type="radio" name="kvaliteta" value="Kvalitetno" className={style.input}/>
                             Kvalitetno
                         </label>
                         <label className={style.label}>
-                            <input type="radio" name="kvaliteta" value="Vrhunsko" checked={filters.kvaliteta === "Vrhunsko"} onChange={handleFilterChange} className={style.input}/>
+                            <input type="radio" name="kvaliteta" value="Vrhunsko"className={style.input}/>
                             Vrhunsko
                         </label>
                     </form>
@@ -87,15 +44,15 @@ export default function Vina() {
                     <p>Vrsta:</p>
                     <form className={style.forma}>
                         <label className={style.label}>
-                            <input type="radio" name="vrsta" value="" checked={filters.vrsta === ""} onChange={handleFilterChange} className={style.input}/>
+                            <input type="radio" name="vrsta" value="" className={style.input}/>
                             Sve
                         </label>
                         <label className={style.label}>
-                            <input type="radio" name="vrsta" value="Bijelo" checked={filters.vrsta === "Bijelo"} onChange={handleFilterChange} className={style.input}/>
+                            <input type="radio" name="vrsta" value="Bijelo" className={style.input}/>
                             Bijelo
                         </label>
                         <label className={style.label}>
-                            <input type="radio" name="vrsta" value="Crno" checked={filters.vrsta === "Crno"} onChange={handleFilterChange} className={style.input}/>
+                            <input type="radio" name="vrsta" value="Crno" className={style.input}/>
                             Crno
                         </label>
                     </form>
@@ -103,9 +60,9 @@ export default function Vina() {
             </div>
             <div className={style.rightcol}>
                 {vines ? (
-                    filteredData.map((vino) => (
-                        <Link href={`vina/${vino.id}`} style={{textDecoration: 'none', color: 'unset'}}>
-                            <div className={style.card} key={vino.id} style={{backgroundImage: `url("/images/${vino.image}")`}}>
+                    vines.map((vino) => (
+                        <Link href={`vina/${vino.id}`} style={{textDecoration: 'none', color: 'unset'}} key={vino.id} >
+                            <div className={style.card} key={vino.id} style={{backgroundImage: `url("${vino.slika}")`}}>
                                 {vino.naziv}
                             </div>
                         </Link>
@@ -117,3 +74,5 @@ export default function Vina() {
         </div>
     )
 }
+
+export default Vina;
