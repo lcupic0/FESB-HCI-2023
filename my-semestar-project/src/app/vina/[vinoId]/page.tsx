@@ -21,7 +21,7 @@ export interface VinoPageParams{
 // Vino #{params.vinoId}
 const VinoPage = async ({params}: VinoPageParams) => {
 
-    const vino = await contentfulService.getVineById(params.vinoId);
+    const vino = await contentfulService.getVineById(params.vinoId); // jel ode triba raditi provjeru preko typescripta???
     console.log(vino);
     if(!vino){
         return <div>Product not found!</div>
@@ -36,14 +36,17 @@ const VinoPage = async ({params}: VinoPageParams) => {
                         <h1>{vino.naziv}</h1>
                         <div className={style.facts}>
                         {Object.entries(vino).map(([key, value]) => (
-                            !["id", "slika", "opis"].includes(key) && (
+                            !["id", "slika", "opis", "stanje", "cijena"].includes(key) && (
                                 <Infotab key={key} params={{ fact: key, factValue: value }} />
                             )
                         ))}
                         </div>
                         <div className={style.dostupnost}>
-                            <span><FontAwesomeIcon icon={faCheck} className={style.ikona}/>Na zalihi</span>
-                            <span className={style.cijena}>10.42 €</span>
+                            <span>
+                                <FontAwesomeIcon icon={vino.stanje ? faCheck : faXmark} className={style.ikona} style={{color: `${vino.stanje ? "var(--clr-accent-400)" : "var(--clr-error)"}`}}/>
+                                {vino.stanje ? "Na zalihi" : "Nema na stanju"}
+                            </span>
+                            <span className={style.cijena}>{vino.cijena} €</span>
                         </div>
                     </div>
                 </div>

@@ -15,6 +15,10 @@ const gqlAllVinoQuery = `
         berba
         alkohol
         opis
+        sorta
+        pakiranje
+        cijena
+        stanje
       }
     }
   }
@@ -35,6 +39,10 @@ query getProductById($vinoid: String!){
     berba,
     alkohol,
     opis
+    sorta
+    pakiranje
+    cijena
+    stanje
   }
 }
 `;
@@ -58,6 +66,10 @@ interface VinoIdResponse{
     berba: number;
     alkohol: string;
     opis: string;
+    sorta: string;
+    pakiranje: string;
+    cijena: number;
+    stanje: boolean;
     slika: {
       url: string;
     }
@@ -74,6 +86,10 @@ interface VinoItem{
     berba: number;
     alkohol: string;
     opis: string;
+    sorta: string;
+    pakiranje: string;
+    cijena: number;
+    stanje: boolean;
     slika: {
         url: string;
         title: string;
@@ -90,6 +106,10 @@ export interface TypeVineListItem{
   alkohol: string;
   opis: string;
   slika: string;
+  sorta: string;
+  pakiranje: string;
+  cijena: number;
+  stanje: boolean;
 }
 
 /*
@@ -124,6 +144,10 @@ const getAllVines = async (): Promise<TypeVineListItem[]> => {
       alkohol: item.alkohol,
       opis: item.opis,
       slika: item.slika.url,
+      sorta: item.sorta,
+      pakiranje: item.pakiranje,
+      cijena: item.cijena,
+      stanje: item.stanje,
     }));
     
     return parsedData;
@@ -164,6 +188,10 @@ const getVineById = async (id: string): Promise<TypeVineListItem | null> => {
       alkohol: vine.alkohol,
       opis: vine.opis,
       slika: vine.slika.url,
+      sorta: vine.sorta,
+      pakiranje: vine.pakiranje,
+      cijena: vine.cijena,
+      stanje: vine.stanje,
     }
 
     return parsedData;

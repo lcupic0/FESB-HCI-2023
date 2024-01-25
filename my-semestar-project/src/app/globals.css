@@ -73,6 +73,8 @@ html:focus-within {
   --clr-accent-400: #4B9FE1;
   --clr-accent-200: #b0976d;  
 
+  --clr-error: #bc0a0a;
+
   --font-color-100: var(--clr-neutral-100);
   --font-color-200: #C5C6C7;
   --font-color-300: #6a6a6a;

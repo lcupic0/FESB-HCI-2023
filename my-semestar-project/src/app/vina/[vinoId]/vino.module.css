@@ -34,6 +34,7 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
+  min-width: 300px;
 }
 
 .rightcol > h1{
@@ -41,6 +42,7 @@
   text-transform: uppercase;
   letter-spacing: 2px;
   color: var(--clr-neutral-100);
+  text-align: center;
 }
 
 .rightcol > h1:after{
@@ -135,6 +137,10 @@
     width: 200px;
     height: 300px;
   }
+
+  .rightcol{
+    min-width: 280px;
+  }
 }
 
 @media(max-width: 480px){
@@ -144,6 +150,10 @@
   }
   .wrapper{
     padding: 50px 0px;
+  }
+
+  .rightcol{
+    width: 100%;
   }
 
   .slika{
