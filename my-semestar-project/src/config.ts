@@ -8,5 +8,4 @@ export const pages: Page[] = [
       { href: "/vina", title: "Vina" },
       { href: "/gastronomija", title: "Gastronomija" },
       { href: "/onama", title: "O nama" },
-      { href: "/cms/products", title: "Products"}
 ];
