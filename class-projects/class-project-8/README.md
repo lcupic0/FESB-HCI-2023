@@ -8,3 +8,11 @@ https://vinario-hci-project.vercel.app/
 - Dohvaćanje podataka sa CMS-a, konzultiranje po pitanju client i server-side renderinga. **_DONE_**
 - Dizajniranje Kontakt page-a i forme. **_DONE_**
 - Popunjavanje page-a "Vino" koje se odnosi na jednu instancu s podacima koje smo fetchali sa CMS-a 
+
+## To/Do za idući class projekt, kraj
+- Popraviti filter za novi način fetch-a.
+- Kad se klikne na pojedini projekt, podcrtati "Vina".
+- Pokušat implementirati izbornik na Homepage-u.
+- Popraviti stackanje komponente na komponentu - mobilna verzija.
+- Dodati kontakt formu.
+- Napraviti "Page Not Found" stranicu.
