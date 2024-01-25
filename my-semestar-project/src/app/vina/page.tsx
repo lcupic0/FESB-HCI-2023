@@ -20,6 +20,10 @@ const Vina: FC<any> = () => {
         console.log(vines);
     }, []);
 
+    if(!vines){
+        return <div>Products not found!</div>
+    }
+
     return(
         <div className={style.vina}>
             <div className={style.leftcol}>

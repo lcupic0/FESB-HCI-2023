@@ -1,0 +1,12 @@
+.wrapper{
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
+  padding-bottom: 8px;
+  text-transform: capitalize;
+}
+
+.wrapper>span:first-child{
+  font-weight: 500;
+}

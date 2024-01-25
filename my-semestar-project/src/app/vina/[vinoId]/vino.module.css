@@ -21,11 +21,13 @@
 
 .slika{
   width: 300px;
-  height: 400px;
+  height: 350px;
   /* object-fit: scale-down; */
   border-radius: 30px;
-  object-fit: cover;
-  object-position: center;
+  background-image: url("https://images.ctfassets.net/0sy38vi9cob8/6jeBVGPGYwyt73lPKdFNhi/00480b9336da24a6f970cfb681ab9f4e/vino2.jpg?h=250");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .rightcol{

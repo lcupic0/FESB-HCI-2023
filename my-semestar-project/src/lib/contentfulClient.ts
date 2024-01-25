@@ -20,12 +20,48 @@ const gqlAllVinoQuery = `
   }
 `;
 
+const gqlVinoByIdQuery = `
+query getProductById($vinoid: String!){
+	vina(id: $vinoid){
+    sys{
+      id
+    }
+  	naziv,
+    slika{
+      url
+    },
+    vrsta,
+    kvaliteta,
+    berba,
+    alkohol,
+    opis
+  }
+}
+`;
+
 const baseUrl = `https://graphql.contentful.com/content/v1/spaces/${process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID}/environments/master`;
 
 interface VinaCollectionResponse{
     vinaCollection: {
         items: VinoItem[];
     }
+}
+
+interface VinoIdResponse{
+  vina: {
+    sys: {
+      id: string;
+    };
+    naziv: string;
+    vrsta: string;
+    kvaliteta: string;
+    berba: number;
+    alkohol: string;
+    opis: string;
+    slika: {
+      url: string;
+    }
+  }
 }
 
 interface VinoItem{
@@ -99,8 +135,47 @@ const getAllVines = async (): Promise<TypeVineListItem[]> => {
   }
 };
 
+const getVineById = async (id: string): Promise<TypeVineListItem | null> => {
+  try{
+    const response = await fetch(baseUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_KEY}`,
+      },
+      body: JSON.stringify({
+        query: gqlVinoByIdQuery,
+        variables: {vinoid: id},
+      }),
+    });
+
+    const body = (await response.json()) as {
+      data: VinoIdResponse;
+    }
+
+    const vine = body.data.vina;
+
+    const parsedData: TypeVineListItem = {
+      id: vine.sys.id,
+      naziv: vine.naziv,
+      vrsta: vine.vrsta,
+      kvaliteta: vine.kvaliteta,
+      berba: vine.berba,
+      alkohol: vine.alkohol,
+      opis: vine.opis,
+      slika: vine.slika.url,
+    }
+
+    return parsedData;
+  } catch(err){
+    console.log(err);
+    return null;
+  }
+}
+
 const contentfulService = {
   getAllVines,
+  getVineById
 };
 
 export default contentfulService;
