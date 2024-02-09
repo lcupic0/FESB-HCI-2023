@@ -16,3 +16,4 @@ https://vinario-hci-project.vercel.app/
 - Popraviti stackanje komponente na komponentu - mobilna verzija.
 - Dodati kontakt formu.
 - Napraviti "Page Not Found" stranicu.
+- Napraviti preload font-a ili neki nacin da se font ucitava na vrijeme.
