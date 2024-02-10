@@ -22,14 +22,14 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 60px 30px;
+    padding: 50px 20px;
     gap: 40px;
 }
 
 .info > h1{
     letter-spacing: 1px;
     color: var(--clr-accent-400);
-    font-weight: 300;
+    font-weight: 400; /* Mozda 300 */
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 5px;
@@ -55,7 +55,7 @@
 .button{
     cursor: pointer;
     border: 0;
-    padding: 10px 16px;
+    padding: 15px 16px;
     background: var(--clr-button-grey);
     color: var(--font-color-200);
     border: none;
