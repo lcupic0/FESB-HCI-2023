@@ -50,9 +50,9 @@ query getProductById($vinoid: String!){
 const baseUrl = `https://graphql.contentful.com/content/v1/spaces/${process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID}/environments/master`;
 
 interface VinaCollectionResponse{
-    vinaCollection: {
-        items: VinoItem[];
-    }
+  vinaCollection: {
+      items: VinoItem[];
+  }
 }
 
 interface VinoIdResponse{

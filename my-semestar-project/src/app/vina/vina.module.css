@@ -94,7 +94,7 @@
 
 @media(max-width: 768px){
     .vina{
-        padding: 15px;
+        padding: 70px 15px;
     }
     .leftcol{
         justify-content: center;

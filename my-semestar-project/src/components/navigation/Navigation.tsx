@@ -14,8 +14,7 @@ const Navigation: React.FC<navigationProps> = ({ pages }) => {
 
   const [isNavExpanded, setIsNavExpanded] = useState(false);
   const pathname = usePathname();
-  // console.log(pathname)
-  // console.log(isNavExpanded);
+  const splitedPathname = `/${pathname.split("/")[1]}`;
 
   return (
     <div className={navigation.wrap}>
@@ -27,7 +26,7 @@ const Navigation: React.FC<navigationProps> = ({ pages }) => {
           <ul className={navigation.list}>
                 {pages.map(({href, title}) => (
                     <li className={`${navigation.listitem}`} key={href}>
-                      <Link href={href} className={`${navigation.link} ${pathname === href ? navigation.active : ''}`} onClick={() => setIsNavExpanded(!isNavExpanded)}>
+                      <Link href={href} className={`${navigation.link} ${splitedPathname === href ? navigation.active : ''}`} onClick={() => setIsNavExpanded(!isNavExpanded)}>
                         {title}
                       </Link>
                     </li>
@@ -35,7 +34,7 @@ const Navigation: React.FC<navigationProps> = ({ pages }) => {
           </ul>
         </nav>
         <Link href="/kontakt">
-          <button className={navigation["contact-button"]}>
+          <button className={`${navigation["contact-button"]} ${splitedPathname === "/kontakt" ? navigation.active : ''}`}>
             Kontakt
           </button>
         </Link>

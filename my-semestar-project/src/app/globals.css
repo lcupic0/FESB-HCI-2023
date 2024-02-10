@@ -68,6 +68,9 @@ html:focus-within {
   --clr-background-400: #1F2833;
   --clr-background-100: #C5C6C7;  
 
+  --clr-button-grey: #393939;
+  --clr-button-hover: #4f4f4f;
+
   --clr-neutral-100: hsl(0, 0%, 100%);
   
   --clr-accent-400: #4B9FE1;
@@ -98,6 +101,7 @@ html:focus-within {
   --fs-500: 1.875rem; /* 30px */
   --fs-550: 2rem;
   --fs-600: 2.5rem; /* 40px */
+  --fs-650: 3rem;
   --fs-700: 3.5rem;
   --fs-800: 4.5rem;
   --fs-900: 5rem;

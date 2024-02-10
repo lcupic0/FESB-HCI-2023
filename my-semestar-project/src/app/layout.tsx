@@ -3,22 +3,34 @@ import clsx from "clsx";
 import { 
   Inter,
   Montserrat,
+  Josefin_Sans,
+  Dancing_Script,
 } from 'next/font/google'
 import './globals.css'
 import Navigation from '@/components/navigation/Navigation';
 import Footer from '@/components/footer/Footer';
 import {pages} from '@/config'
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const inter = Inter({ 
+  subsets: ["latin"], 
+  variable: "--font-inter" 
+});
 const montserrat = Montserrat({
-  weight: ["400", "700"],
   subsets: ["latin"],
   variable: "--font-montserrat",
 });
+const josefinSans = Josefin_Sans({
+  subsets: ["latin"],
+  variable: "--font-montserrat",
+});
+const dancingScript = Dancing_Script({
+  subsets: ["latin"],
+  variable: "--font-montserrat", 
+})
 
 export const metadata: Metadata = {
   title: 'Vinario | HCI project',
-  description: 'Semestar project for "Human Computer Interaction" course at FESB.',
+  description: 'Semestar project for "Human Computer Interaction" course at FESB Split.',
 }
 
 export default function RootLayout({
@@ -29,12 +41,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={clsx(
-        inter.variable,
-        montserrat.variable
-      )}
+      className={montserrat.className}
     >
-      <body className={montserrat.className}>
+      <body>
         <Navigation pages={pages}/>
         {children}
         <Footer pages={pages}/>
