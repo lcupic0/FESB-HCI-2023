@@ -24,7 +24,7 @@
 
 .title{
     font-size: var(--fs-primary-heading);
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-montserrat);
     letter-spacing: 2px;
 }
 h1.title:after{

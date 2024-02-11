@@ -31,7 +31,7 @@ const VinoPage = async ({params}: VinoPageParams) => {
         <div className={style.vino}>
             <div className={style.wrapper}>
                 <div className={style.data}>
-                    <div className={style.slika}></div>
+                    <div className={style.slika} style={{backgroundImage: `url("${vino.slika}")`}}></div>
                     <div className={style.rightcol}>
                         <h1>{vino.naziv}</h1>
                         <div className={style.facts}>

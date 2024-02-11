@@ -1,6 +1,5 @@
 .wrapper{
     min-height: 100vh;
-    overflow: hidden;
     --max-width: 900px;
     margin-inline: auto;
     width: min(var(--max-width), 98%);

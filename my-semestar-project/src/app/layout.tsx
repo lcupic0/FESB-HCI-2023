@@ -41,8 +41,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={montserrat.className}
+      className={clsx(montserrat.className, josefinSans.className)}
+      
     >
+      <head>
+      </head>
+
       <body>
         <Navigation pages={pages}/>
         {children}
