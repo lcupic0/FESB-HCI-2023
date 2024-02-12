@@ -11,7 +11,7 @@
     background-color: red;
 }
 
-.wrapper{
+.mywrapper{
     width: 300px;
     padding: 50px 0px;
     margin-inline: auto;
@@ -86,6 +86,10 @@
 .opis{
     text-align: center;
     margin: 20px 0px;
+    display: -webkit-box;
+    -webkit-line-clamp: 5; /* Number of lines to show */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .opislarge{
@@ -123,7 +127,7 @@
 }
 
 @media (min-width: 480px){
-    .wrapper{
+    .mywrapper{
         width: 400px;
     }
 
@@ -153,7 +157,7 @@
         width: 250px;
         height: auto;
     }
-    .wrapper{
+    .mywrapper{
         width: 1000px;
         padding: 80px 20px;
         margin-inline: auto;
@@ -169,6 +173,12 @@
         display:block;
         text-align: unset;
         margin: 35px 0px;
+        width: 100%;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 5; /* Number of lines to show */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
     }
 
     .even-columns{
@@ -187,7 +197,7 @@
 }
 
 @media (min-width: 1300px){
-    .wrapper{
+    .mywrapper{
         width: 1200px;
     }
     .vino .slika{
