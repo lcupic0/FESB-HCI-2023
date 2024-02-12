@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import styles from './page.module.css'
 import Heading from './_components/heading/Heading'
 import Facts from './_components/facts/Facts'

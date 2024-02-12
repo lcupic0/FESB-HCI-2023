@@ -1,5 +1,4 @@
 .wrapper{
-    min-height: 100vh;
     --max-width: 900px;
     margin-inline: auto;
     width: min(var(--max-width), 98%);
@@ -67,17 +66,3 @@ h1.naslov:after{
     height: 100%;
     width: 100%;
 }
-
-/* .gastro-gallery{
-    width: 100%;
-}
-
-.gastro-gallery:first-child{
-    border-bottom: 4px solid white;
-}
-
-.gastro-gallery Image{
-    height: 200px;
-    width: 100%;
-    object-fit: cover;
-} */
