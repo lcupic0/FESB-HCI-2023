@@ -7,6 +7,7 @@
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
     inset: 0;
     position: sticky;
+    font-weight: 500;
 }
 
 .wrapper::after{
@@ -58,8 +59,9 @@
     width: 100%;
 }
 
-
-
+.listitem:last-child{
+    display: none;
+}
 
 .contact-button{
     cursor: pointer;
@@ -70,12 +72,13 @@
     border: 2px solid var(--font-color-200);
     border-radius: 8px;
     transition: .4s ease-in-out;
+    font-weight: var(--fw-semi-bold);
+
 }
 
 .contact-button:hover{
     color: white;
     border: 2px solid white;
-    font-weight: var(--fw-semi-bold);
 }
 
 .contact-button.active{
@@ -86,7 +89,7 @@
 .logo{
     color: var(--font-color-200);
     font-weight: 400;
-    font-family: 'Dancing Script', cursive;
+    font-family: var(--font-dancing-script), cursive;
     font-size: 25px;
     transition: .4s ease-in-out;
     text-decoration: none;
@@ -115,6 +118,10 @@
         display: grid;
         text-align: center;
         gap: 50px;
+    }
+
+    .listitem:last-child{
+        display: block;
     }
 
     .primary{

@@ -5,6 +5,8 @@ import {
   Montserrat,
   Josefin_Sans,
   Dancing_Script,
+  Metrophobic,
+  News_Cycle
 } from 'next/font/google'
 import './globals.css'
 import Navigation from '@/components/navigation/Navigation';
@@ -21,11 +23,21 @@ const montserrat = Montserrat({
 });
 const josefinSans = Josefin_Sans({
   subsets: ["latin"],
-  variable: "--font-montserrat",
+  variable: "--font-josefin-sans",
 });
 const dancingScript = Dancing_Script({
   subsets: ["latin"],
-  variable: "--font-montserrat", 
+  variable: "--font-dancing-script", 
+})
+const metrophobic = Metrophobic({
+  subsets: ["latin"],
+  variable: "--font-metrophobic",
+  weight: "400",
+})
+const newsCycle = News_Cycle({
+  subsets: ["latin"],
+  variable: "--font-news-cycle",
+  weight: ['400', '700'],
 })
 
 export const metadata: Metadata = {
@@ -41,8 +53,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={clsx(montserrat.className, josefinSans.className)}
-      
+      className={clsx(montserrat.variable, josefinSans.variable, dancingScript.variable, metrophobic.variable, newsCycle.variable)}
     >
       <head>
       </head>

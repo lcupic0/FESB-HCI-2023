@@ -22,7 +22,7 @@
     margin: 20px 0px;
     text-align: center;
     font-size: var(--fs-550);
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-montserrat);
     font-weight: 300;
     letter-spacing: 2px;
     color: var(--clr-neutral-100);

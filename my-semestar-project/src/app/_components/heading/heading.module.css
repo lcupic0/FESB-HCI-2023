@@ -9,6 +9,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
+    font-weight: 500;
 }
 
 .content{
@@ -26,6 +27,7 @@
     font-size: var(--fs-primary-heading);
     font-family: var(--font-montserrat);
     letter-spacing: 2px;
+    font-weight: 600;
 }
 h1.title:after{
     content: '';

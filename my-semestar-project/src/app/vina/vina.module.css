@@ -4,6 +4,7 @@
     padding: 70px;
     color: var(--clr-neutral-100);
     overflow: hidden;
+    font-weight: 500;
 }
 
 .leftcol{

@@ -1,6 +1,6 @@
 .kontakt{
     display: flex;
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-montserrat), sans-serif;
     letter-spacing: 1px;
     color: white;
     font-weight: 300;
@@ -68,7 +68,7 @@
 }
 
 .input{
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-montserrat), sans-serif;
     letter-spacing: 1px;
     padding: 10px;
     border: none;

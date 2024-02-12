@@ -7,6 +7,10 @@
     background-attachment: fixed;
 }
 
+.swiper-pagination-bullet{
+    background-color: red;
+}
+
 .wrapper{
     width: 300px;
     padding: 50px 0px;
@@ -49,27 +53,30 @@
 
 .kategorija{
     color: var(--clr-accent-400);
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-montserrat), sans-serif;
     letter-spacing: 1px;
     position: relative;
     font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
 }
 
 .ime{
     font-size: var(--fs-500);
     color: var(--clr-neutral-100);
-    /* font-family: 'Phudu', cursive; */
-    font-family: 'Metrophobic', sans-serif;
+    font-family: var(--font-metrophobic), sans-serif;
     letter-spacing: 1px;
     margin-top: 20px;
     font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
 }
 
 .berba{
     font-size: var(--fs-450);
     color: var(--clr-neutral-100);
     font-weight: 300;
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-montserrat), sans-serif;
 }
 
 .glavni-info:nth-child(n+2){
@@ -134,6 +141,14 @@
     .read-more{
         display: block;
     }
+    .informacije{
+        align-items: flex-start;
+        width: 65%;
+    }
+    .vino{
+        width: 35%;
+    }
+
     .vino .slika{
         width: 250px;
         height: auto;
@@ -142,9 +157,6 @@
         width: 1000px;
         padding: 80px 20px;
         margin-inline: auto;
-    }
-    .informacije{
-        align-items: flex-start;
     }
     .glavni-info{
         align-items: flex-start;

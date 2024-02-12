@@ -14,7 +14,7 @@
     align-items: center;
     gap: 15px;
     font-size: var(--fs-400);
-    font-family: 'News Cycle', sans-serif;
+    /* font-family: 'News Cycle', sans-serif; */
 }
 
 .link{
@@ -22,6 +22,7 @@
     cursor: pointer;
     color: var(--font-color-300);
     text-transform: uppercase;
+    font-weight: 500;
 }
 
 .link:hover{
@@ -42,7 +43,7 @@
 
 .title{
     font-size: var(--fs-secondary-heading);
-    font-family: 'News Cycle', sans-serif;
+    font-family: var(--font-news-cycle), sans-serif;
     color: var(--clr-neutral-100);
     font-weight: lighter;
     letter-spacing: 2px;
@@ -59,7 +60,7 @@
 .quote{
     font-size: var(--fs-550);
     color: var(--clr-accent-200);
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: var(--font-josefin-sans), sans-serif;
     text-align: center;
 }
 
@@ -75,6 +76,10 @@
 .drustvene-mreze{
     display: flex;
     gap: 20px;
+}
+
+.potpis{
+    font-weight: 500;
 }
 
 .info{
