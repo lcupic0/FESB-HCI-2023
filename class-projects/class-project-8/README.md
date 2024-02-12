@@ -13,7 +13,7 @@ https://vinario-hci-project.vercel.app/
 - Popraviti filter za novi način fetch-a, eventualno popraviti da return iz pojedinog item-a ne resetira filter.  **_DONE_**
 - Kad se klikne na pojedini projekt, podcrtati "Vina". **_DONE_**
 - Napraviti preload font-a ili neki nacin da se font ucitava na vrijeme. **_DONE_**
-- Pokušat implementirati izbornik na Homepage-u.
+- Dodati kontakt formu. **_DONE_**
+- Pokušati implementirati izbornik na Homepage-u.
 - Popraviti stackanje komponente na komponentu - mobilna verzija.
-- Dodati kontakt formu.
 - Napraviti "Page Not Found" stranicu.
