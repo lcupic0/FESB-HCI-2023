@@ -9,9 +9,9 @@
     background-color: var(--clr-background-800);
 }
 
+/* Treba maknuti Flexbox s .post elementa i sve proradi na iphoneu */
 .post{
     padding: 10px;
-    
 }
 
 .post > h1{
@@ -62,4 +62,13 @@ h1.naslov:after{
     object-fit: cover;
     height: 100%;
     width: 100%;
+}
+
+@media (min-width: 768px){
+    .post{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
