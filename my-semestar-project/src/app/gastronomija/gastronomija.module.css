@@ -1,3 +1,74 @@
 .gastronomija{
-    min-height: 100vh;
+    height: calc(100vh - 80px);
+    background-image: url("https://images.ctfassets.net/0sy38vi9cob8/7nVZLPv6w4S5Ypg1NyfVXR/3021374acd7e85ce493e8c773cc34595/soon.jpg");
+    text-align: center;
+
+}
+
+@keyframes fadeIn {
+    from {top: 20%; opacity: 0;}
+    to {top: 100; opacity: 1;}
+}
+
+@-webkit-keyframes fadeIn {
+  from {top: 20%; opacity: 0;}
+  to {top: 100; opacity: 1;}
+}
+
+.wrapper{
+    --max-width: 1300px;
+    --padding: 1rem;
+    margin-inline: auto; /* da postavi left and right -> Logical Property */
+    width: min(var(--max-width), 100% - (2*var(--padding)));
+    
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    animation: fadeIn 2000ms ease;
+    -webkit-animation: fadeIn 2000ms ease;
+}
+
+.wrapper h1{
+    text-transform: uppercase;
+    font-weight: 500;
+    color: white;
+    font-size: 64px;
+    line-height: 1;
+    margin-bottom: 0;
+}
+
+.wrapper p{
+    font-size: 20px;
+    color: var(--font-color-200);
+    font-weight: 500;
+}
+
+.button{
+    margin-top: 50px;
+    width: 150px;
+    cursor: pointer;
+    border: 0;
+    padding: 15px 25px;
+    background: var(--clr-button-grey);
+    color: var(--clr-neutral-100);
+    border-radius: 8px;
+    transition: .2s ease-in-out;
+}
+
+.button:hover{
+    background-color: var(--clr-button-hover);
+}
+
+@media(max-width: 480px){
+    .wrapper h1{
+        font-size: 55px;
+    }
+    
+    .wrapper p{
+        font-size: 15px;
+        color: var(--font-color-200);
+        font-weight: 500;
+    }
 }

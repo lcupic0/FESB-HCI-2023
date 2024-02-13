@@ -15,7 +15,7 @@
 }
 
 .post > h1{
-    margin: 20px 0px;
+    margin: 40px 0px;
     text-align: center;
     font-size: var(--fs-550);
     font-family: var(--font-montserrat);
@@ -25,7 +25,7 @@
 }
 
 .post:first-child > h1{
-    margin: 0px 0px 20px 0px;
+    margin: 0px 0px 40px 0px;
 }
 
 h1.naslov:after{
@@ -41,6 +41,19 @@ h1.naslov:after{
     object-fit: cover;
     width: 100%;
     height: auto;
+    -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .2s ease-in-out;
+	transition: .2s ease-in-out;
+}
+
+.figure{
+    overflow: hidden;
+}
+
+.slika:hover{
+	-webkit-transform: scale(1.2);
+	transform: scale(1.2);
 }
 
 .post p{

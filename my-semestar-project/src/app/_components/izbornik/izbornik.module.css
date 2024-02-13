@@ -110,6 +110,11 @@
     font-size: var(--fs-400);
     color: var(--clr-accent-100);
     cursor: pointer;
+    transition: .2s ease-out;
+}
+
+.strelica:hover{
+    color: var(--clr-accent-400);
 }
 
 .strelicaright{

@@ -55,9 +55,6 @@ export default function RootLayout({
       lang="en"
       className={clsx(montserrat.variable, josefinSans.variable, dancingScript.variable, metrophobic.variable, newsCycle.variable)}
     >
-      <head>
-      </head>
-
       <body>
         <Navigation pages={pages}/>
         {children}

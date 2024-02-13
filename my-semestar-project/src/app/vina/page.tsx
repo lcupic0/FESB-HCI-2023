@@ -6,6 +6,7 @@ import Link from "next/link";
 
 import contentfulService from "@/lib/contentfulClient";
 import { TypeVineListItem } from "@/lib/contentfulClient";
+import Filter from "@/components/filter/filter";
 
 const Vina: FC<any> = () => {
     const [vines, setVines] = useState<TypeVineListItem[]>([]);
@@ -22,6 +23,24 @@ const Vina: FC<any> = () => {
         
         fetchData();
     }, []);
+    
+    const filterKvaliteta = {
+        naziv: "kvaliteta",
+        inputs: [
+            {value: "", ime: "Sve"},
+            {value: "Kvalitetno", ime: "Kvalitetno"},
+            {value: "Vrhunsko", ime: "Vrhunsko"},
+        ]
+    }
+
+    const filterVrsta = {
+        naziv: "vrsta",
+        inputs: [
+            {value: "", ime: "Sve"},
+            {value: "Bijelo", ime: "Bijelo"},
+            {value: "Crno", ime: "Crno"},
+        ]
+    }
 
     const handleFilterChange = (event: any) => {
         const {name, value} = event.target;
@@ -41,40 +60,8 @@ const Vina: FC<any> = () => {
     return(
         <div className={style.vina}>
             <div className={style.leftcol}>
-                <div className={style.odabir}>
-                    <p>Kvaliteta:</p>
-                    <form className={style.forma}>
-                        <label className={style.label}>
-                            <input type="radio" name="kvaliteta" value="" className={style.input} onChange={handleFilterChange} checked={filters.kvaliteta === ""}/>
-                            Sve
-                        </label>
-                        <label className={style.label}>
-                            <input type="radio" name="kvaliteta" value="Kvalitetno" className={style.input} onChange={handleFilterChange} checked={filters.kvaliteta === "Kvalitetno"}/>
-                            Kvalitetno
-                        </label>
-                        <label className={style.label}>
-                            <input type="radio" name="kvaliteta" value="Vrhunsko"className={style.input} onChange={handleFilterChange} checked={filters.kvaliteta === "Vrhunsko"}/>
-                            Vrhunsko
-                        </label>
-                    </form>
-                </div>
-                <div className={style.odabir}>
-                    <p>Vrsta:</p>
-                    <form className={style.forma}>
-                        <label className={style.label}>
-                            <input type="radio" name="vrsta" value="" className={style.input} onChange={handleFilterChange} checked={filters.vrsta === ""}/>
-                            Sve
-                        </label>
-                        <label className={style.label}>
-                            <input type="radio" name="vrsta" value="Bijelo" className={style.input} onChange={handleFilterChange} checked={filters.vrsta === "Bijelo"}/>
-                            Bijelo
-                        </label>
-                        <label className={style.label}>
-                            <input type="radio" name="vrsta" value="Crno" className={style.input} onChange={handleFilterChange} checked={filters.vrsta === "Crno"}/>
-                            Crno
-                        </label>
-                    </form>
-                </div>
+                <Filter filter={filterKvaliteta} handleFilterChange={handleFilterChange} filters={filters} />
+                <Filter filter={filterVrsta} handleFilterChange={handleFilterChange} filters={filters} />
             </div>
             <div className={style.rightcol}>
                 {vines ? (
