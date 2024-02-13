@@ -2,7 +2,7 @@
     --max-width: 900px;
     margin-inline: auto;
     width: min(var(--max-width), 98%);
-    padding: 80px 0px;
+    padding: 50px 0px;
 }
 
 .background{
@@ -65,6 +65,9 @@ h1.naslov:after{
 }
 
 @media (min-width: 768px){
+    .wrapper{
+        padding: 80px 0px;
+    }
     .post{
         display: flex;
         flex-direction: column;

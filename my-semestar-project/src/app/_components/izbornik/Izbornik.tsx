@@ -1,4 +1,5 @@
 "use client"
+import { useEffect, useState } from "react";
 import izbornik from "./izbornik.module.css"
 import contentfulService from "@/lib/contentfulClient";
 import { TypeVineListItem } from "@/lib/contentfulClient";
@@ -7,15 +8,16 @@ import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons"
 import vino2 from "../../../../public/images/vino2.png"
 import Image from 'next/image'
 import Link from "next/link"
-import { Swiper, SwiperSlide } from "swiper/react"
-import { Navigation, Pagination, EffectCoverflow, Autoplay } from "swiper/modules"
+import { Swiper, SwiperClass, SwiperSlide, useSwiper } from "swiper/react"
+import { Navigation, Pagination, Autoplay, EffectFade } from "swiper/modules"
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import 'swiper/css/effect-coverflow';
-import { useEffect, useState } from "react";
+import 'swiper/css/effect-fade';
 
 export default function Izbornik() {
+    const swiper = useSwiper();
+
     const [vines, setVines] = useState<TypeVineListItem[]>([]);
     useEffect(() => {
         const fetchData = async () => {
@@ -27,16 +29,22 @@ export default function Izbornik() {
     }, []);
 
   return (
+
     <Swiper
-        modules={[Navigation, EffectCoverflow, Autoplay]}
-        navigation
-        speed={1000}
-        effect="coverflow"
+        modules={[Pagination, Navigation, EffectFade, Autoplay]}
+        navigation={{
+            nextEl: '.button-next-slide',
+            prevEl: '.button-prev-slide'
+        }}
+        
+        speed={1500}
+        effect="fade"
         followFinger={true}
         autoplay={{
             delay: 5000,
             disableOnInteraction: true,
         }}
+        className={izbornik.swiper}
     >
     {vines.map((vino)=> (
     <SwiperSlide key={vino.id}>
@@ -61,15 +69,15 @@ export default function Izbornik() {
                 </div>
 
                 <div className={izbornik.vino}>
-                    <FontAwesomeIcon icon={faArrowLeft} className={`${izbornik.strelica}`}></FontAwesomeIcon>
                     <Image src={vino2} alt="Vino" className={izbornik.slika} priority />
-                    <FontAwesomeIcon icon={faArrowRight} className={`${izbornik.strelica}`}></FontAwesomeIcon>
                 </div>
             </div>
         </div>
     </div>
     </SwiperSlide>
     ))}
+    <FontAwesomeIcon icon={faArrowLeft} className={`${izbornik.strelica} ${izbornik.strelicaleft} button-prev-slide`} />
+    <FontAwesomeIcon icon={faArrowRight} className={`${izbornik.strelica} ${izbornik.strelicaright} button-next-slide`} />
     </Swiper>
   )
 }

@@ -1,3 +1,7 @@
+.swiper{
+    position: relative;
+}
+
 .background{
     background-color: var(--clr-background-900);
     background-image: url("/images/pozadina.jpg");
@@ -5,10 +9,6 @@
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-}
-
-.swiper-pagination-bullet{
-    background-color: red;
 }
 
 .mywrapper{
@@ -84,6 +84,7 @@
 }
 
 .opis{
+    font-size: 14px;
     text-align: center;
     margin: 20px 0px;
     display: -webkit-box;
@@ -98,12 +99,25 @@
 }
 
 .strelica{
-    align-self: center;
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 20px;
+    z-index: 1000;
+    position: absolute;
     /* width: 25px; */
-    font-size: var(--fs-450);
-    color: var(--clr-neutral-100);
+    font-size: var(--fs-400);
+    color: var(--clr-accent-100);
     cursor: pointer;
-    margin: 0px
+}
+
+.strelicaright{
+    right: 0;
+}
+
+.strelicaleft{
+    left: 0;
 }
 
 .read-more{
@@ -127,12 +141,17 @@
 }
 
 @media (min-width: 480px){
+    .strelica{
+        display: block;
+    }
+
     .mywrapper{
+        padding: 50px 50px;
         width: 400px;
     }
 
     .vino .slika{
-        width: 300px;
+        width: 200px;
         height: auto;
     }
 
@@ -159,7 +178,7 @@
     }
     .mywrapper{
         width: 1000px;
-        padding: 80px 20px;
+        padding: 80px 50px;
         margin-inline: auto;
     }
     .glavni-info{

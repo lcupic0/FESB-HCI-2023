@@ -28,7 +28,7 @@ body {
 }
 
 body{
-  text-rendering: optimizeSpeed;
+  /* text-rendering: optimizeSpeed; */
   line-height: 1.5;
 }
 
