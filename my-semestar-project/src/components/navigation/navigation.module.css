@@ -89,7 +89,7 @@
 .logo{
     color: var(--font-color-200);
     font-weight: 400;
-    font-family: var(--font-dancing-script), cursive;
+    font-family: var(--font-dancing-script), sans-serif;
     font-size: 25px;
     transition: .4s ease-in-out;
     text-decoration: none;

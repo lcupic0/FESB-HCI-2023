@@ -25,7 +25,7 @@
 
 .title{
     font-size: var(--fs-primary-heading);
-    font-family: var(--font-montserrat);
+    font-family: var(--font-montserrat) sans-serif;
     letter-spacing: 2px;
     font-weight: 600;
 }

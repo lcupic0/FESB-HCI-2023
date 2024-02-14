@@ -20,7 +20,7 @@
 .link{
     transition: .3s;
     cursor: pointer;
-    color: var(--font-color-300);
+    color: var(--font-color-200);
     text-transform: uppercase;
     font-weight: 500;
 }
