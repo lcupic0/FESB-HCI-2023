@@ -1,6 +1,9 @@
-.gastronomija{
+.notfound{
     height: calc(100vh - 80px);
-    background-image: url("https://images.ctfassets.net/0sy38vi9cob8/7nVZLPv6w4S5Ypg1NyfVXR/3021374acd7e85ce493e8c773cc34595/soon.jpg");
+    background-image: url("/pozadina.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     text-align: center;
 }
 
@@ -15,6 +18,9 @@
 }
 
 .wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
     --max-width: 1300px;
     --padding: 1rem;
     margin-inline: auto; /* da postavi left and right -> Logical Property */
@@ -29,45 +35,47 @@
     -webkit-animation: fadeIn 2000ms ease;
 }
 
-.wrapper h1{
-    text-transform: uppercase;
-    font-weight: 500;
-    color: white;
-    font-size: 64px;
+.naslov{
+    color: var(--clr-accent-400);
+    font-weight: 600;
+    font-size: 70px;
     line-height: 1;
-    margin-bottom: 0;
 }
 
-.wrapper p{
-    font-size: 20px;
-    color: var(--font-color-200);
+.opis{
+    font-size: 25px;
     font-weight: 500;
+    color: var(--clr-neutral-100);
 }
 
 .button{
-    margin-top: 50px;
-    width: 150px;
     cursor: pointer;
     border: 0;
     padding: 15px 25px;
-    background: var(--clr-button-grey);
-    color: var(--clr-neutral-100);
+    background: none;
+    color: var(--font-color-200);
+    border: 2px solid var(--font-color-200);
+    font-weight: 600;
     border-radius: 8px;
     transition: .2s ease-in-out;
 }
 
 .button:hover{
-    background-color: var(--clr-button-hover);
+    background-color: rgb(255, 255, 255);
+    border: 2px solid var(--clr-neutral-100);
+    color: black;
 }
 
-@media(max-width: 480px){
-    .wrapper h1{
+@media(max-width: 768px){
+    .naslov{
         font-size: 55px;
     }
+
+    .opis{
+        font-size:20px;
+    }
     
-    .wrapper p{
-        font-size: 15px;
-        color: var(--font-color-200);
-        font-weight: 500;
+    .button{
+        padding: 12px 22px;
     }
 }
