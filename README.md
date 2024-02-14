@@ -1,9 +1,12 @@
 ﻿This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 ## Deployed Application
-You can see what the currently published application looks like at: [Preview](https://vinario-hci-project.vercel.app/)
+You can see what the currently published application looks like at: [Vercel link](https://vinario-hci-project.vercel.app/)
 ## Notion report
-You can see Notion report of this project at: [Preview](https://standing-taleggio-757.notion.site/Nas-kutak-HCI-2024-FESB-6adea357509f445eb0f381aca99982ee)
+You can see Notion report of this project at: [Notion link](https://standing-taleggio-757.notion.site/Nas-kutak-HCI-2024-FESB-6adea357509f445eb0f381aca99982ee)
+## Figma Application
+You can find design of this application at Figma: [Figma link](https://www.figma.com/file/gb0pAEayzM3vOwQlh4cgR7/Vje%C5%BEba-4---High-fidelity-prototype?type=design&node-id=18%3A70&mode=design&t=6bJQTAVyTFcmf6Ym-1)
 
+## Instructions
 First, run the development server:
 
 ```bash
