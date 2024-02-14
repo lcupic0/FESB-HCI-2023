@@ -1,8 +1,8 @@
 ﻿This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 ## Deployed Application
 You can see what the currently published application looks like at: [Preview](https://vinario-hci-project.vercel.app/)
-
-## Getting Started
+## Notion report
+You can see Notion report of this project at: [Preview](https://standing-taleggio-757.notion.site/Nas-kutak-HCI-2024-FESB-6adea357509f445eb0f381aca99982ee)
 
 First, run the development server:
 
