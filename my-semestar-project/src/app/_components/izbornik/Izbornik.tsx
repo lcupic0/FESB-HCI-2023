@@ -61,13 +61,14 @@ export default function Izbornik() {
                     <p className={izbornik.opislarge}>
                     {vino.opis}
                     </p>
-                    <Link href="/vina" style={{textDecoration: 'none'}}>
+                    <Link href={`/vina/${vino.id}`} style={{textDecoration: 'none'}}>
                         <button className={izbornik["read-more"]}>Pročitaj više</button>
                     </Link>
                 </div>
-
                 <div className={izbornik.vino}>
-                    <Image src={vino2} alt="Vino" className={izbornik.slika} priority />
+                    <Link href={`/vina/${vino.id}`} style={{textDecoration: 'none'}}>
+                            <Image src={vino2} alt="Vino" className={izbornik.slika} priority />
+                    </Link>
                 </div>
             </div>
         </div>

@@ -45,6 +45,7 @@
     border-radius: 30px;
     display: flex;
     justify-content: center;
+    cursor: pointer;
 }
 .vino .slika{
     width: 220px;
