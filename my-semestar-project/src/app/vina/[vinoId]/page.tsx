@@ -22,7 +22,7 @@ export interface VinoPageParams{
 const VinoPage = async ({params}: VinoPageParams) => {
 
     const vino = await contentfulService.getVineById(params.vinoId); // jel ode triba raditi provjeru preko typescripta???
-    console.log(vino);
+    console.log(vino?.opis);
     if(!vino){
         return <div>Product not found!</div>
     }

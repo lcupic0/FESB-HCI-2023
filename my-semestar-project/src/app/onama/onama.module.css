@@ -1,3 +1,252 @@
-.onama{
-    min-height: 100vh;
+.content{
+    --max-width: 1000px;
+    --padding: 1.5rem;
+    
+    margin-inline: auto; /* da postavi left and right -> Logical Property */
+    width: min(var(--max-width), 100% - (2*var(--padding)));
+    margin-bottom: 50px;
+}
+
+.header{
+    height: 300px;
+    background-image: url("/images/heading.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 50px;
+}
+
+.naslov div{
+    color: var(--clr-accent-400);
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.naslov h1{
+    text-align: center;
+    font-size: 38px;
+    color: var(--clr-neutral-100);
+    line-height: 1;
+    font-weight: 500;
+}
+
+.naslov h1:after{
+    content: '';
+    width: 25%;
+    height: 1px;
+    display: block;
+    background: var(--clr-accent-400);
+    margin: 20px auto;
+}
+
+.opis{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.opis p:first-child{
+    margin-bottom: 20px;
+}
+
+.uvod{
+    margin-bottom: 50px;
+}
+
+/* PROZORCIC */
+
+.prozorcic{
+    background-color: var(--clr-background-400);
+    border-radius: 11px;
+    padding: 30px 20px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.left-col{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.right-col{
+    display: none;
+}
+
+/* LISTA TIMA */
+.podnaslov{
+    margin-bottom: 35px;
+}
+
+.podnaslov div{
+    color: var(--clr-accent-400);
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-bottom: 20px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.podnaslov h1{
+    text-align: center;
+    font-size: 38px;
+    color: var(--clr-neutral-100);
+    line-height: 1;
+    font-weight: 500;
+}
+
+.list{
+    display: grid;
+    gap: 40px;
+    justify-items: center;
+    margin-bottom: 50px;
+}
+
+.list-item{
+    background-color: var(--clr-background-400);
+    width: 180px;
+}
+
+.avatar{
+    width: 100%;
+    height: 180px;
+    background-image: url("/images/avatars/bezos.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.opisavatara{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+}
+
+.opisavatara span:first-child{
+    color: var(--clr-neutral-100);
+}
+
+.opisavatara span:last-child{
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+/* VIDEO I GALERIJA */
+.photovideo{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+}
+
+.photo{
+    width: 100%;
+}
+
+.video{
+    width: 100%;
+}
+
+.video > div > h1, .photo > div > h1{
+    margin-bottom: 30px;
+    font-size: 38px;
+    color: var(--clr-neutral-100);
+    line-height: 1;
+    font-weight: 500;
+    text-align: center;
+}
+
+.videoeditor{
+    border: none;
+    width: 100%;
+    height: 250px
+}
+
+.slika {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    cursor:grab
+}
+
+@media(min-width: 480px){
+    .list{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(min-width: 768px){
+    .list{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .photovideo{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .photo{
+        width: 50%;
+    }
+    .video > div > h1, .photo > div > h1{
+        text-align: left;
+    }
+    .video{
+        width: 50%;
+    }
+}
+
+@media(min-width: 1100px){
+    .uvod{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .opis{
+        width: 600px;
+    }
+
+    .prozorcic{
+        display: flex;
+        padding: 0;
+    }
+
+    .right-col{
+        display: block;
+        background-image: url("/images/lokacija.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 50%;
+    }
+
+    .left-col{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 20px;
+    }
+
+    .left-col p{
+        width: 400px;
+    }
+
+    .podnaslov div, .podnaslov h1{
+        text-align: left; 
+    }
+
+    .list{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }

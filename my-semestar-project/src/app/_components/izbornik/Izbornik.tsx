@@ -8,7 +8,7 @@ import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons"
 import vino2 from "../../../../public/images/vino2.png"
 import Image from 'next/image'
 import Link from "next/link"
-import { Swiper, SwiperClass, SwiperSlide, useSwiper } from "swiper/react"
+import { Swiper, SwiperSlide, useSwiper } from "swiper/react"
 import { Navigation, Pagination, Autoplay, EffectFade } from "swiper/modules"
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -16,8 +16,6 @@ import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 
 export default function Izbornik() {
-    const swiper = useSwiper();
-
     const [vines, setVines] = useState<TypeVineListItem[]>([]);
     useEffect(() => {
         const fetchData = async () => {

@@ -57,6 +57,8 @@ const Vina: FC<any> = () => {
         return <div>Products not found!</div>
     }
 
+    console.log(vines);
+
     return(
         <div className={style.vina}>
             <div className={style.leftcol}>

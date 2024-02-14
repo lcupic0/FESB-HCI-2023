@@ -63,7 +63,6 @@ h1.title:after{
 
 .arrow-down{
     font-size: var(--fs-600); 
-    cursor: pointer;
     transition: .3s ease-in-out;
     padding-top: 20px;
     /* width: 40px; */

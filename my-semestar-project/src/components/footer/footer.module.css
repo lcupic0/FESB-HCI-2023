@@ -66,8 +66,10 @@
 
 .icon{
     color: var(--font-color-300);
+    font-size: 20px;
     width: 20px;
     transition: .3s;
+    cursor: pointer;
 }
 .icon:hover{
     color: var(--clr-accent-400);
